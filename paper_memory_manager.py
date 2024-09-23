@@ -336,9 +336,11 @@ def main_command(config, source_url, config_file, test):
     print(f"Main command: {paper_count} paper(s) processed and stored.")
 
 
-def query_memory_command(config):
+def query_memory_command(config, config_file):
     """Subcommand to query stored memories."""
-    mem0_memory = get_mem0_memory(config)
+    # Load custom mem0 config if provided, otherwise use the default one
+    mem0_memory = get_mem0_memory(config, config_file=config_file)
+    
     query_papers_memory(mem0_memory, "papers_memory")
 
 
@@ -346,9 +348,11 @@ def query_db_command():
     """Subcommand to query the SQLite database."""
     query_papers_db()
 
-def ask_llm_command(config, question, include_memory):
+
+def ask_llm_command(config, question, include_memory, config_file):
     """Subcommand to ask a question directly to the LLM, optionally including relevant stored memories."""
-    mem0_memory = get_mem0_memory(config)
+    # Load custom mem0 config if provided, otherwise use the default one
+    mem0_memory = get_mem0_memory(config, config_file=config_file)
     
     # Initialize the prompt with the user's question
     prompt = f"Question: {question}"
@@ -391,20 +395,24 @@ def main():
     
     # Define the main command for fetching and storing papers
     main_parser = subparsers.add_parser('main', help='Fetch and store research papers')
-    main_parser.add_argument('--source-url', type=str, default='https://huggingface.co/papers', help='The URL source for fetching research papers')
+    main_parser.add_argument('--source-url', type=str, default='https://huggingface.co/papers', 
+                             help='The URL source for fetching research papers')
     main_parser.add_argument('--config-file', type=str, help='Path to custom mem0 config file')
     main_parser.add_argument('--test', action='store_true', help='Process only 1 paper for testing')
 
     # Subcommand for querying memory
     memory_parser = subparsers.add_parser('query-memory', help='Query stored memories from memory')
-    
+    memory_parser.add_argument('--config-file', type=str, help='Path to custom mem0 config file')
+
     # Subcommand for querying the SQLite database
     db_parser = subparsers.add_parser('query-db', help='Query the SQLite database for stored papers')
 
     # Subcommand for asking LLM questions directly
     ask_llm_parser = subparsers.add_parser('ask-llm', help='Ask a question to the LLM')
     ask_llm_parser.add_argument('--question', type=str, required=True, help='Question to ask the LLM')
-    ask_llm_parser.add_argument('--include-memory', action='store_true', help='Include stored memories from Qdrant in the prompt to the LLM')
+    ask_llm_parser.add_argument('--include-memory', action='store_true', 
+                                help='Include stored memories from Qdrant in the prompt to the LLM')
+    ask_llm_parser.add_argument('--config-file', type=str, help='Path to custom mem0 config file')
 
     # Parse the arguments
     args = parser.parse_args()
@@ -416,13 +424,14 @@ def main():
     if args.command == 'main':
         main_command(config, args.source_url, args.config_file, args.test)
     elif args.command == 'query-memory':
-        query_memory_command(config)
+        query_memory_command(config, args.config_file)
     elif args.command == 'query-db':
         query_db_command()
     elif args.command == 'ask-llm':
-        ask_llm_command(config, args.question, args.include_memory)
+        ask_llm_command(config, args.question, args.include_memory, args.config_file)
     else:
         parser.print_help()
+
 
 
 if __name__ == "__main__":
