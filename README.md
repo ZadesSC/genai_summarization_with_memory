@@ -37,7 +37,7 @@
    AZURE_OPENAI_API_KEY=your-openai-api-key
    OPENAI_API_VERSION=v1
 
-## **Installation**
+## **Configuration**
 
 You can customize the behavior of the program using external configuration files or environment variables. The system supports overriding the default mem0 configuration via a JSON config file passed in the --config-file argument.
 
