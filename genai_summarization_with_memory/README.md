@@ -56,10 +56,10 @@ Running it as a python program requires installing it first.
    python -m papers.main
    ```
 
-You can run it direcly as a program (NOTE this is currently broken on Windows)
+You can run it direcly as a program
    ```bash
    pip install -e .
-   paper-manager
+   paper_manager
    ```
 
 ### Main Command
