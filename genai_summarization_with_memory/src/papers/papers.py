@@ -1,6 +1,6 @@
 import logging
 from bs4 import BeautifulSoup
-from src.database.database import insert_paper
+from src.database.database import insert_paper, create_database
 from src.llm.llm import generate_llm_response
 from src.memory.memory import get_mem0_memory
 from src.utils.http_requests import make_http_request
@@ -88,6 +88,7 @@ Paper Details:
 
 def process_daily_papers(source_url, config, config_file=None, test=False):
     """Main command to fetch papers and store them."""
+    create_database()
     mem0_memory = get_mem0_memory(config, config_file=config_file)
 
     # Fetch the daily papers from the specified source URL
