@@ -9,11 +9,11 @@ with open("requirements.txt") as f:
     ]
 
 setup(
-    name='genai_app_util',
+    name='genai_app_utils',
     version='0.1',
     description="Shared utilities and modules for GENAI summarization project",
-    package_dir={'': 'genai_app_util'},
-    packages=find_packages('genai_app_util'),
+    package_dir={'': 'genai_app_utils'},
+    packages=find_packages(where='genai_app_utils'),
     python_requires=">=3.11",
     install_requires=requirements,
 )

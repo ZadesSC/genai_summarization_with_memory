@@ -2,7 +2,7 @@ import json
 import os
 import logging
 from mem0 import Memory
-from src.config.config import Config  # Update import to reflect src structure
+from genai_app_utils.config.config import Config  # Update import to reflect src structure
 
 PAPER_QDRANT_COLLECTION_NAME = "papers_collection"
 

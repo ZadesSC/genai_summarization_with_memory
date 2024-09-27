@@ -1,9 +1,9 @@
 import logging
 from bs4 import BeautifulSoup
-from src.database.database import insert_paper, create_database
-from src.llm.llm import generate_llm_response
-from src.memory.memory import get_mem0_memory
-from src.utils.http_requests import make_http_request
+from genai_app_utils.database.database import insert_paper, create_database
+from genai_app_utils.llm.llm import generate_llm_response
+from genai_app_utils.memory.memory import get_mem0_memory
+from genai_app_utils.utils.http_requests import make_http_request
 
 def extract_abstract_from_url(url):
     """

@@ -1,5 +1,5 @@
 import logging
-from src.utils.http_requests import make_http_request  # Updated import
+from genai_app_utils.utils.http_requests import make_http_request  # Updated import
 
 # Hard code to azure for now, most likley change, add more other LLMs later
 def generate_llm_response(prompt, deployment_name, config):

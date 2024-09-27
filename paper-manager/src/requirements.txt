@@ -1,1 +1,1 @@
-genai_app_util
+genai_app_utils

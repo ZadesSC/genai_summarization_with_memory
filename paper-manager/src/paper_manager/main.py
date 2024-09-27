@@ -3,15 +3,14 @@
 import os
 import sys
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+#sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
 import argparse
-from genai_app_util import get_all_papers, get_mem0_memory
-from genai_app_util import Config
-from genai_app_util import get_all_papers
-from genai_app_util import get_mem0_memory, query_papers_memory
-from genai_app_util import process_daily_papers
-from genai_app_util import generate_llm_response
+from genai_app_utils.config.config import Config
+from genai_app_utils.database.database import get_all_papers
+from genai_app_utils.memory.memory import get_mem0_memory, query_papers_memory
+from genai_app_utils.papers.papers import process_daily_papers
+from genai_app_utils.llm.llm import generate_llm_response
 
 def query_memory_command(config, config_file):
     """Subcommand to query stored memories."""
