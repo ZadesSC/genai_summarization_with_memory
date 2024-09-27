@@ -72,7 +72,12 @@ def convert_paper_to_diary_entry(paper, config, model_name):
     """
     Convert a paper to a diary entry from the author's perspective using the LLM.
     """
-    diary_prompt = f'''Write a diary entry from the perspective of an author who has just completed a research paper. Reflect on the challenges faced during the research, the key discoveries made, and the significance of the findings. Discuss any innovative methods or frameworks introduced and their implications for the field. Conclude with feelings of pride and anticipation for the community's response to the work.
+    diary_prompt = f'''Write a diary entry from the perspective of an author who has just completed a research paper. 
+    Reflect on the challenges faced during the research, the key discoveries made, and the significance of the findings. 
+    Discuss any innovative methods or frameworks introduced and their implications for the field. 
+    Conclude with feelings of pride and anticipation for the community's response to the work. 
+    Do not include any quotes or curly brackets ({{}}) in the response. 
+    Do not use double quotes in the response, use only single quotes.
 
 Paper Details:
     ID: {paper['id']}
@@ -113,6 +118,7 @@ def process_daily_papers(source_url, config, config_file=None, test=False):
 
         # Convert the paper details into a diary entry format and add it to memory
         diary_entry = convert_paper_to_diary_entry(paper, config, 'w1')
+        print(diary_entry)
         response = mem0_memory.add(diary_entry, "papers_memory")
         print(f"Added memory: {response}")
 
