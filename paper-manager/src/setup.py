@@ -8,16 +8,17 @@ with open("requirements.txt") as f:
         if line.strip() and not line.startswith("#")
     ]
 
+
 setup(
     name='paper-manager',
     version='0.1',
-    description="A simple program to download huggingface papers (or related paper sites) and store them in LLM memory using mem0",
-    package_dir={'': 'src'},
-    packages=find_packages('src'),
+    description="Shared utilities and modules for GENAI summarization project",
+    package_dir={'': 'paper_manager'},
+    packages=find_packages('paper_manager'),
     python_requires=">=3.11",
     entry_points={
         'console_scripts': [
-            'paper_manager=papers.main:main',
+            'paper_manager=paper_manager.main:main',
         ],
     },
     install_requires=requirements,
