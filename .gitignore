@@ -1,4 +1,4 @@
-# Ignore files
+# Ignore files and extensions
 .env
 *.db
 *.egg-info
@@ -9,3 +9,4 @@
 __pycache__
 build/
 venv-linux/
+.vscode/
