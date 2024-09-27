@@ -1,0 +1,231 @@
+
+
+Processing category: nominal
+Stored statement: I will learn French this year.
+Stored statement: I will learn Japanese this year.
+Stored statement: I will learn Spanish this year.
+Stored statement: I will learn German this year.
+Stored statement: I will learn Mandarin this year.
+Stored statement: I will learn Italian this year.
+Stored statement: I will learn Russian this year.
+Stored statement: I will learn Arabic this year.
+Stored statement: I will learn Portuguese this year.
+Stored statement: I will learn Korean this year.
+
+
+Outputing all user_id memories for validation
+Plans to learn Korean this year. Prefers learning languages (specifically Korean) and personal development/growth.
+Learning a new language is planned for 2023.
+
+
+Executing query testcases 1
+Query: Did I plan to learn French this year?
+Searched Memories: ['Learning a new language is planned for 2023.', 'Plans to learn Korean this year. Prefers learning languages (specifically Korean) and personal development/growth.']
+LLM Response: Based on my memories, it seems that you had initially planned to focus on learning Korean in 2023. There's no mention of French being part of your plans for the year. Would you like me to help you explore ways to learn either Korean or another language?
+Query: Did I plan to learn Japanese this year?
+Searched Memories: ['Plans to learn Korean this year. Prefers learning languages (specifically Korean) and personal development/growth.', 'Learning a new language is planned for 2023.']
+LLM Response: Based on my memories, it doesn't seem that you had plans to learn Japanese specifically this year. In fact, I recall that you were planning to focus on learning Korean this year, which aligns with your interest in languages and personal development/growth. While learning a new language was indeed planned for 2023, there's no specific mention of Japanese being part of those plans.
+Query: Did I plan to learn Spanish this year?
+Searched Memories: ['Learning a new language is planned for 2023.', 'Plans to learn Korean this year. Prefers learning languages (specifically Korean) and personal development/growth.']
+LLM Response: No, based on your past plans and preferences, it appears that you had not planned to learn Spanish this year. In fact, your memories indicate a focus on learning Korean in 2023, rather than another language like Spanish.
+Query: Did I plan to learn German this year?
+Searched Memories: ['Learning a new language is planned for 2023.', 'Plans to learn Korean this year. Prefers learning languages (specifically Korean) and personal development/growth.']
+LLM Response: According to my memories, it doesn't seem that you had plans to learn German this year. Instead, I recall that you were thinking of learning Korean in 2023, which aligns with your interest in personal development and growth through language learning.
+Query: Did I plan to learn Mandarin this year?
+Searched Memories: ['Plans to learn Korean this year. Prefers learning languages (specifically Korean) and personal development/growth.', 'Learning a new language is planned for 2023.']
+LLM Response: No, you didn't plan to learn Mandarin this year. Your plans are focused on learning Korean instead.
+Query: Did I plan to learn Italian this year?
+Searched Memories: ['Learning a new language is planned for 2023.', 'Plans to learn Korean this year. Prefers learning languages (specifically Korean) and personal development/growth.']
+LLM Response: Based on my memories, it doesn't seem that you planned to learn Italian this year. Your plans for the year involve learning a new language, but specifically, it's Korean that you've chosen to focus on, with an emphasis on personal development and growth. There's no mention of Italian in your planning or preferences.
+Query: Did I plan to learn Russian this year?
+Searched Memories: ['Learning a new language is planned for 2023.', 'Plans to learn Korean this year. Prefers learning languages (specifically Korean) and personal development/growth.']
+LLM Response: Based on my memories, it doesn't seem that you had planned to learn Russian this year. Instead, your intention was to focus on learning Korean in 2023. Learning a new language is indeed one of the goals for this year, but it's specifically tied to Korean, not Russian. Would you like to explore more about learning Korean or other personal development goals?
+Query: Did I plan to learn Arabic this year?
+Searched Memories: ['Learning a new language is planned for 2023.', 'Plans to learn Korean this year. Prefers learning languages (specifically Korean) and personal development/growth.']
+LLM Response: Based on my memories, it appears that you have plans to learn a new language in 2023, but there's no specific mention of Arabic. In fact, your memories suggest that you're interested in learning Korean this year, which implies that your focus is on mastering the Korean language and culture.
+Query: Did I plan to learn Portuguese this year?
+Searched Memories: ['Learning a new language is planned for 2023.', 'Plans to learn Korean this year. Prefers learning languages (specifically Korean) and personal development/growth.']
+LLM Response: Based on my memories, it appears that you had planned to learn a new language in 2023, but the specific language was not Portuguese. Your original plan was to learn Korean this year, as indicated by your preferences for learning languages and personal development. Unfortunately, there's no record of Portuguese being part of your plans.
+Query: Did I plan to learn Korean this year?
+Searched Memories: ['Plans to learn Korean this year. Prefers learning languages (specifically Korean) and personal development/growth.', 'Learning a new language is planned for 2023.']
+LLM Response: Yes, you did plan to learn Korean this year! In fact, it's one of the goals you've set for yourself in 2023.
+
+
+Executing query testcases 2
+Query: What languages do I plan to learn this year?
+Searched Memories: ['Learning a new language is planned for 2023.', 'Plans to learn Korean this year. Prefers learning languages (specifically Korean) and personal development/growth.']
+LLM Response: Based on my memories, it seems that you have plans to learn a new language in 2023. Specifically, you are interested in learning Korean this year! I'm excited for your growth and development journey.
+
+
+Processing category: quantitative
+Stored statement: I have scored an 80 on the midterm this year.
+Stored statement: I have scored a 2200 on the SAT this year.
+Stored statement: I have scored a 95 on the final exam this year.
+Stored statement: I have scored a 1500 on the GRE this year.
+Stored statement: I have scored a 300 on the TOEFL this year.
+Stored statement: I have scored an 85 on the placement test this year.
+Retrying due to error: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Format error in JSON body: value new_memory_id is not a valid point ID, valid values are either an unsigned integer or a UUID at line 1 column 65"},"time":0.0}'
+Retrying due to error: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Format error in JSON body: value new_memory_id is not a valid point ID, valid values are either an unsigned integer or a UUID at line 1 column 65"},"time":0.0}'
+Stored statement: I have scored a 92 on the quiz this year.
+Stored statement: I have scored a 31 on the ACT this year.
+Stored statement: I have scored a 76 on the assignment this year.
+
+
+Outputing all user_id memories for validation
+Scored a 92 on the quiz this year; Took a quiz
+Scored a 31 on the ACT this year; Took the ACT exam
+Scored a 31 on the ACT this year; Took the ACT exam
+Scored a 76 on an assignment this year; Assignment was completed in a given timeframe (implied by "this year")
+
+
+Executing query testcases 1
+Query: Did I score 80 on the midterm this year?
+Searched Memories: ['Scored a 92 on the quiz this year; Took a quiz', 'Scored a 76 on an assignment this year; Assignment was completed in a given timeframe (implied by "this year")', 'Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 31 on the ACT this year; Took the ACT exam']
+LLM Response: Unfortunately, I couldn't find any memory that directly mentions your midterm score. The memories only mention scores from other assessments: a quiz (92), an assignment (76), and the ACT exam (31). There's no information about a midterm.
+
+However, if I had to make a guess based on the pattern of scores you've had this year (a mix of decent grades like 92 and 76, alongside lower ones like 31), I'd say it's possible that your midterm score might be somewhere in between. But without more information or memories, I can't provide a definitive answer.
+Query: What score did I achieve on the SAT this year?
+Searched Memories: ['Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 92 on the quiz this year; Took a quiz', 'Scored a 76 on an assignment this year; Assignment was completed in a given timeframe (implied by "this year")']
+LLM Response: I don't have any memories of you taking the SAT exam. My memories only mention ACT scores, a quiz score, and an assignment score, but no SAT information. I'm not able to provide a score for your SAT this year.
+Query: Did I score 95 on the final exam this year?
+Searched Memories: ['Scored a 92 on the quiz this year; Took a quiz', 'Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 76 on an assignment this year; Assignment was completed in a given timeframe (implied by "this year")']
+LLM Response: I have access to memories about your academic performance, but unfortunately, I don't see any record of you taking a final exam or scoring on it. The only scores I can recall are:
+
+* 92 on the quiz this year
+* 31 on the ACT exam this year (twice)
+* 76 on an assignment this year
+
+I couldn't find any information about your performance on a final exam. Sorry!
+Query: What score did I achieve on the GRE this year?
+Searched Memories: ['Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 76 on an assignment this year; Assignment was completed in a given timeframe (implied by "this year")', 'Scored a 92 on the quiz this year; Took a quiz']
+LLM Response: I don't have any memories related to scoring on the GRE. However, I do remember taking exams and achieving scores on other tests. You scored a 31 on the ACT this year, but that's not relevant to your performance on the GRE. I also recall you achieving high scores on an assignment (76) and a quiz (92), but those results don't provide information about your GRE score either.
+
+Unfortunately, I'm unable to answer your question about your GRE score since there are no memories related to it.
+Query: Did I score 300 on the TOEFL this year?
+Searched Memories: ['Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 92 on the quiz this year; Took a quiz', 'Scored a 76 on an assignment this year; Assignment was completed in a given timeframe (implied by "this year")']
+LLM Response: I don't have any information about you taking the TOEFL exam or scoring on it. My memories only contain information about other exams and activities, but none related to TOEFL. I can try to help with something else if you'd like!
+Query: Did I score 85 on the placement test this year?
+Searched Memories: ['Scored a 92 on the quiz this year; Took a quiz', 'Scored a 76 on an assignment this year; Assignment was completed in a given timeframe (implied by "this year")', 'Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 31 on the ACT this year; Took the ACT exam']
+LLM Response: I don't see any memories related to scoring on a placement test. However, I do have some information about scores from other exams and assignments that you took this year.
+
+It appears that you scored a 92 on a quiz, a 76 on an assignment, and a 31 on the ACT exam (twice). Unfortunately, none of these memories indicate whether or not you scored 85 on the placement test. I'm not able to provide information on your score for that specific test.
+Query: What score did I achieve on the GMAT this year?
+Searched Memories: ['Scored a 76 on an assignment this year; Assignment was completed in a given timeframe (implied by "this year")', 'Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 92 on the quiz this year; Took a quiz']
+LLM Response: I'm not able to find any memories related to your GMAT score. My memories only include information about assignments, ACT scores, and quizzes, but no mention of the Graduate Management Admission Test (GMAT).
+Query: Did I score 92 on the quiz this year?
+Searched Memories: ['Scored a 92 on the quiz this year; Took a quiz', 'Scored a 76 on an assignment this year; Assignment was completed in a given timeframe (implied by "this year")', 'Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 31 on the ACT this year; Took the ACT exam']
+LLM Response: According to my memories, yes, you scored a 92 on the quiz this year. I have a specific memory of it from earlier in our conversation.
+Query: What score did I achieve on the ACT this year?
+Searched Memories: ['Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 92 on the quiz this year; Took a quiz', 'Scored a 76 on an assignment this year; Assignment was completed in a given timeframe (implied by "this year")']
+LLM Response: According to my memories, you scored a 31 on the ACT this year. That's your achievement!
+Query: Did I score 76 on the assignment this year?
+Searched Memories: ['Scored a 76 on an assignment this year; Assignment was completed in a given timeframe (implied by "this year")', 'Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 92 on the quiz this year; Took a quiz']
+LLM Response: According to my memories, you scored a 76 on an assignment this year. It was completed within the timeframe of this academic year, I believe.
+
+
+Executing query testcases 2
+Query: What scores did I achieve on tests on what exams this year?
+Searched Memories: ['Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 31 on the ACT this year; Took the ACT exam', 'Scored a 92 on the quiz this year; Took a quiz', 'Scored a 76 on an assignment this year; Assignment was completed in a given timeframe (implied by "this year")']
+LLM Response: Based on my memories, it appears that you scored:
+
+* 31 on the ACT exam (twice)
+* 92 on a quiz
+* 76 on an assignment
+
+There is no information about your scores on other exams. It's also worth noting that there is no information about the specific exams or assignments beyond their names, so I couldn't provide additional context or details.
+
+
+Processing category: dates
+Retrying due to error: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Format error in JSON body: value  is not a valid point ID, valid values are either an unsigned integer or a UUID at line 1 column 52"},"time":0.0}'
+Retrying due to error: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Format error in JSON body: value  is not a valid point ID, valid values are either an unsigned integer or a UUID at line 1 column 52"},"time":0.0}'
+Retrying due to error: Unexpected Response: 400 (Bad Request)
+Raw response content:
+b'{"status":{"error":"Format error in JSON body: value Travelled back to the US in the past is not a valid point ID, valid values are either an unsigned integer or a UUID at line 1 column 88"},"time" ...'
+Stored statement: I came back to the United States on March 12th earlier this year.
+Stored statement: I visited Japan on April 15th earlier this year.
+Retrying due to error: 'NoneType' object has no attribute 'payload'
+Stored statement: I attended a conference in Germany on May 3rd earlier this year.
+Stored statement: I traveled to Brazil on June 21st earlier this year.
+Stored statement: I returned from Canada on July 10th earlier this year.
+Stored statement: I went hiking in the Alps on August 5th earlier this year.
+Stored statement: I celebrated a friend's wedding in Italy on September 18th earlier this year.
+Stored statement: I visited the Great Wall of China on October 9th earlier this year.
+Retrying due to error: 'NoneType' object has no attribute 'payload'
+Stored statement: I returned home from Australia on November 22nd earlier this year.
+
+
+Outputing all user_id memories for validation
+{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"
+{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"
+{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"
+{"id": "", "memory": "Visited the Great Wall of China on October 9th this year.", "score": 0.65891314}"
+
+
+Executing query testcases 1
+Query: Did I go to Taiwan earlier this year?
+Searched Memories: ['{"id": "", "memory": "Visited the Great Wall of China on October 9th this year.", "score": 0.65891314}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"']
+LLM Response: I couldn't find any memories related to a trip to Taiwan. My memories only mention visiting the Great Wall of China and returning from Australia, but there's no record of a visit to Taiwan.
+Query: When did I come back to the United States?
+Searched Memories: ['{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Visited the Great Wall of China on October 9th this year.", "score": 0.65891314}"']
+LLM Response: I've accessed your memories, and it seems I have a few similar entries. Based on what I can find... You returned from Australia on November 22nd of this year.
+Query: Did I visit Japan earlier this year?
+Searched Memories: ['{"id": "", "memory": "Visited the Great Wall of China on October 9th this year.", "score": 0.65891314}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"']
+LLM Response: I don't have any memories that indicate you visited Japan earlier this year. In fact, the memories I do have suggest you've been focused on traveling to other destinations, such as China and Australia, but there's no mention of Japan. So, unfortunately, I wouldn't be able to confirm a visit to Japan from these memories.
+Query: When did I attend a conference in Germany?
+Searched Memories: ['{"id": "", "memory": "Visited the Great Wall of China on October 9th this year.", "score": 0.65891314}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"']
+LLM Response: I don't have a memory that indicates you attended a conference in Germany. In fact, there are no memories related to Germany or conferences at all. My only relevant memories mention visiting the Great Wall of China and returning from Australia, but neither of those mentions Germany.
+Query: Did I travel to Brazil earlier this year?
+Searched Memories: ['{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Visited the Great Wall of China on October 9th this year.", "score": 0.65891314}"']
+LLM Response: Based on my memories, I don't see any records or mentions of you traveling to Brazil earlier this year. However, I do have three identical memories that mention your return from Australia on November 22nd and visiting Australia earlier in the year.
+
+Additionally, there's a separate memory that notes your visit to the Great Wall of China on October 9th this year, but again, no mention of Brazil.
+
+So, unfortunately, my answer would be: I don't have any information or memories suggesting you traveled to Brazil earlier this year.
+Query: When did I return from Canada?
+Searched Memories: ['{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Visited the Great Wall of China on October 9th this year.", "score": 0.65891314}"']
+LLM Response: I'm afraid I don't have any memories of you visiting Canada, but I do have some information about your previous travels. Unfortunately, it appears that all my stored memories relate to Australia, not Canada. My most relevant memory is:
+
+"Returned from Australia on November 22nd. Visited Australia earlier this year."
+
+However, since there's no mention of Canada in these memories, I'm unable to provide an answer to the question about when you returned from Canada.
+
+If you'd like to add a new memory related to your Canadian trip, I'd be happy to help!
+Query: Did I go hiking in the Alps earlier this year?
+Searched Memories: ['{"id": "", "memory": "Visited the Great Wall of China on October 9th this year.", "score": 0.65891314}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"']
+LLM Response: No, there is no mention of hiking in the Alps or any other specific activity related to the Alps in your memories. The only activities mentioned are visiting the Great Wall of China and traveling to Australia, but neither one involves hiking in the Alps.
+Query: When did I celebrate a friend's wedding in Italy?
+Searched Memories: ['{"id": "", "memory": "Visited the Great Wall of China on October 9th this year.", "score": 0.65891314}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"']
+LLM Response: I'm afraid I don't have any memories that would help me answer your question about celebrating a friend's wedding in Italy. My memories only mention visiting the Great Wall of China and returning from Australia, but none of them mention Italy or a wedding celebration. Sorry!
+Query: Did I visit the Great Wall of China earlier this year?
+Searched Memories: ['{"id": "", "memory": "Visited the Great Wall of China on October 9th this year.", "score": 0.65891314}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"']
+LLM Response: Based on the memories I have, it appears that you did visit the Great Wall of China earlier this year.
+
+Specifically, my top memory related to this question is:
+
+{"id": "", "memory": "Visited the Great Wall of China on October 9th this year.", "score": 0.65891314}"
+
+This suggests a high degree of confidence (0.66) that you visited the Great Wall of China on October 9th, and I do not have any contradictory memories to suggest otherwise.
+
+So, my answer is: Yes, you did visit the Great Wall of China earlier this year!
+Query: When did I return home from Australia?
+Searched Memories: ['{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Visited the Great Wall of China on October 9th this year.", "score": 0.65891314}"']
+LLM Response: Based on my memories, it appears that I returned home from Australia on November 22nd.
+
+
+Executing query testcases 2
+Query: What trips and events did I have earlier this year?
+Searched Memories: ['{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Returned from Australia on November 22nd. Visited Australia earlier this year.", "score": 0}"', '{"id": "", "memory": "Visited the Great Wall of China on October 9th this year.", "score": 0.65891314}"']
+LLM Response: Based on my memories, it appears that you visited two exciting destinations earlier this year.
+
+1. **Australia**: You traveled to Australia and returned home on November 22nd. Unfortunately, I don't have any specific details about your trip there (no score, no additional information), but I know that you did visit earlier in the year.
+2. **The Great Wall of China**: On October 9th this year, you visited the iconic Great Wall of China. This memory has a relatively high confidence score of 0.65891314, indicating that it's likely to be accurate.
+
+If there were other trips or events, I'm not aware of them from these memories. However, based on what I have, these two destinations stand out as memorable experiences for you earlier this year!

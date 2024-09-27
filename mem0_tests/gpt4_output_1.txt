@@ -1,0 +1,200 @@
+
+
+Processing category: nominal
+Stored statement: I will learn French this year.
+Stored statement: I will learn Japanese this year.
+Stored statement: I will learn Spanish this year.
+Stored statement: I will learn German this year.
+Stored statement: I will learn Mandarin this year.
+Stored statement: I will learn Italian this year.
+Stored statement: I will learn Russian this year.
+Stored statement: I will learn Arabic this year.
+Stored statement: I will learn Portuguese this year.
+Stored statement: I will learn Korean this year.
+
+
+Outputing all user_id memories for validation
+Plans to learn French, Japanese, Spanish, German, Mandarin, Italian, Russian, Arabic, Portuguese, and Korean this year.
+
+
+Executing query testcases 1
+Query: Did I plan to learn French this year?
+Searched Memories: ['Plans to learn French, Japanese, Spanish, German, Mandarin, Italian, Russian, Arabic, Portuguese, and Korean this year.']
+LLM Response: Yes, you did plan to learn French this year, along with several other languages.
+Query: Did I plan to learn Japanese this year?
+Searched Memories: ['Plans to learn French, Japanese, Spanish, German, Mandarin, Italian, Russian, Arabic, Portuguese, and Korean this year.']
+LLM Response: Yes, you did plan to learn Japanese this year.
+Query: Did I plan to learn Spanish this year?
+Searched Memories: ['Plans to learn French, Japanese, Spanish, German, Mandarin, Italian, Russian, Arabic, Portuguese, and Korean this year.']
+LLM Response: Yes, you did plan to learn Spanish this year, along with several other languages including French, Japanese, German, Mandarin, Italian, Russian, Arabic, Portuguese, and Korean.
+Query: Did I plan to learn German this year?
+Searched Memories: ['Plans to learn French, Japanese, Spanish, German, Mandarin, Italian, Russian, Arabic, Portuguese, and Korean this year.']
+LLM Response: Yes, you did plan to learn German this year, along with several other languages including French, Japanese, Spanish, Mandarin, Italian, Russian, Arabic, Portuguese, and Korean.
+Query: Did I plan to learn Mandarin this year?
+Searched Memories: ['Plans to learn French, Japanese, Spanish, German, Mandarin, Italian, Russian, Arabic, Portuguese, and Korean this year.']
+LLM Response: Yes, you did plan to learn Mandarin this year, along with several other languages including French, Japanese, Spanish, German, Italian, Russian, Arabic, Portuguese, and Korean.
+Query: Did I plan to learn Italian this year?
+Searched Memories: ['Plans to learn French, Japanese, Spanish, German, Mandarin, Italian, Russian, Arabic, Portuguese, and Korean this year.']
+LLM Response: Yes, you did plan to learn Italian this year, along with several other languages including French, Japanese, Spanish, German, Mandarin, Russian, Arabic, Portuguese, and Korean.
+Query: Did I plan to learn Russian this year?
+Searched Memories: ['Plans to learn French, Japanese, Spanish, German, Mandarin, Italian, Russian, Arabic, Portuguese, and Korean this year.']
+LLM Response: Yes, you did plan to learn Russian this year.
+Query: Did I plan to learn Arabic this year?
+Searched Memories: ['Plans to learn French, Japanese, Spanish, German, Mandarin, Italian, Russian, Arabic, Portuguese, and Korean this year.']
+LLM Response: Yes, you did plan to learn Arabic this year.
+Query: Did I plan to learn Portuguese this year?
+Searched Memories: ['Plans to learn French, Japanese, Spanish, German, Mandarin, Italian, Russian, Arabic, Portuguese, and Korean this year.']
+LLM Response: Yes, you did plan to learn Portuguese this year.
+Query: Did I plan to learn Korean this year?
+Searched Memories: ['Plans to learn French, Japanese, Spanish, German, Mandarin, Italian, Russian, Arabic, Portuguese, and Korean this year.']
+LLM Response: Yes, you did plan to learn Korean this year.
+
+
+Executing query testcases 2
+Query: What languages do I plan to learn this year?
+Searched Memories: ['Plans to learn French, Japanese, Spanish, German, Mandarin, Italian, Russian, Arabic, Portuguese, and Korean this year.']
+LLM Response: This year, you plan to learn French, Japanese, Spanish, German, Mandarin, Italian, Russian, Arabic, Portuguese, and Korean.
+
+
+Processing category: quantitative
+Stored statement: I have scored an 80 on the midterm this year.
+Stored statement: I have scored a 2200 on the SAT this year.
+Stored statement: I have scored a 95 on the final exam this year.
+Stored statement: I have scored a 1500 on the GRE this year.
+Stored statement: I have scored a 300 on the TOEFL this year.
+Stored statement: I have scored an 85 on the placement test this year.
+Stored statement: I have scored a 700 on the GMAT this year.
+Stored statement: I have scored a 92 on the quiz this year.
+Stored statement: I have scored a 31 on the ACT this year.
+Stored statement: I have scored a 76 on the assignment this year.
+
+
+Outputing all user_id memories for validation
+Scored a 31 on the ACT this year.
+Scored an 80 on the midterm this year.
+Scored 1500 on the GRE this year.
+Scored 700 on the GMAT this year.
+Scored 300 on the TOEFL this year.
+Scored a 92 on a quiz this year.
+Scored a 95 on the final exam this year.
+Scored 2200 on the SAT this year.
+Scored an 85 on the placement test this year.
+Scored a 76 on the assignment this year.
+
+
+Executing query testcases 1
+Query: Did I score 80 on the midterm this year?
+Searched Memories: ['Scored an 80 on the midterm this year.', 'Scored an 85 on the placement test this year.', 'Scored a 76 on the assignment this year.', 'Scored a 95 on the final exam this year.', 'Scored a 92 on a quiz this year.', 'Scored 2200 on the SAT this year.', 'Scored 700 on the GMAT this year.', 'Scored 300 on the TOEFL this year.', 'Scored a 31 on the ACT this year.', 'Scored 1500 on the GRE this year.']
+LLM Response: Yes, you did score 80 on the midterm this year.
+Query: What score did I achieve on the SAT this year?
+Searched Memories: ['Scored 2200 on the SAT this year.', 'Scored an 85 on the placement test this year.', 'Scored 1500 on the GRE this year.', 'Scored a 31 on the ACT this year.', 'Scored a 95 on the final exam this year.', 'Scored 700 on the GMAT this year.', 'Scored an 80 on the midterm this year.', 'Scored a 92 on a quiz this year.', 'Scored a 76 on the assignment this year.', 'Scored 300 on the TOEFL this year.']
+LLM Response: You achieved a score of 2200 on the SAT this year.
+Query: Did I score 95 on the final exam this year?
+Searched Memories: ['Scored a 95 on the final exam this year.', 'Scored an 85 on the placement test this year.', 'Scored a 92 on a quiz this year.', 'Scored an 80 on the midterm this year.', 'Scored a 76 on the assignment this year.', 'Scored 1500 on the GRE this year.', 'Scored 300 on the TOEFL this year.', 'Scored 2200 on the SAT this year.', 'Scored 700 on the GMAT this year.', 'Scored a 31 on the ACT this year.']
+LLM Response: Yes, you did score a 95 on the final exam this year.
+Query: What score did I achieve on the GRE this year?
+Searched Memories: ['Scored 1500 on the GRE this year.', 'Scored 700 on the GMAT this year.', 'Scored an 85 on the placement test this year.', 'Scored a 95 on the final exam this year.', 'Scored 300 on the TOEFL this year.', 'Scored an 80 on the midterm this year.', 'Scored 2200 on the SAT this year.', 'Scored a 92 on a quiz this year.', 'Scored a 76 on the assignment this year.', 'Scored a 31 on the ACT this year.']
+LLM Response: You achieved a score of 1500 on the GRE this year.
+Query: Did I score 300 on the TOEFL this year?
+Searched Memories: ['Scored 300 on the TOEFL this year.', 'Scored 1500 on the GRE this year.', 'Scored 2200 on the SAT this year.', 'Scored 700 on the GMAT this year.', 'Scored an 85 on the placement test this year.', 'Scored a 31 on the ACT this year.', 'Scored a 95 on the final exam this year.', 'Scored an 80 on the midterm this year.', 'Scored a 92 on a quiz this year.', 'Scored a 76 on the assignment this year.']
+LLM Response: Yes, you did score 300 on the TOEFL this year.
+Query: Did I score 85 on the placement test this year?
+Searched Memories: ['Scored an 85 on the placement test this year.', 'Scored a 95 on the final exam this year.', 'Scored an 80 on the midterm this year.', 'Scored a 76 on the assignment this year.', 'Scored a 92 on a quiz this year.', 'Scored 300 on the TOEFL this year.', 'Scored 1500 on the GRE this year.', 'Scored 2200 on the SAT this year.', 'Scored a 31 on the ACT this year.', 'Scored 700 on the GMAT this year.']
+LLM Response: Yes, you scored 85 on the placement test this year.
+Query: What score did I achieve on the GMAT this year?
+Searched Memories: ['Scored 700 on the GMAT this year.', 'Scored 1500 on the GRE this year.', 'Scored 2200 on the SAT this year.', 'Scored 300 on the TOEFL this year.', 'Scored a 95 on the final exam this year.', 'Scored an 85 on the placement test this year.', 'Scored an 80 on the midterm this year.', 'Scored a 92 on a quiz this year.', 'Scored a 31 on the ACT this year.', 'Scored a 76 on the assignment this year.']
+LLM Response: You achieved a score of 700 on the GMAT this year.
+Query: Did I score 92 on the quiz this year?
+Searched Memories: ['Scored a 92 on a quiz this year.', 'Scored a 95 on the final exam this year.', 'Scored a 76 on the assignment this year.', 'Scored an 85 on the placement test this year.', 'Scored an 80 on the midterm this year.', 'Scored 2200 on the SAT this year.', 'Scored a 31 on the ACT this year.', 'Scored 700 on the GMAT this year.', 'Scored 300 on the TOEFL this year.', 'Scored 1500 on the GRE this year.']
+LLM Response: Yes, you did score 92 on a quiz this year.
+Query: What score did I achieve on the ACT this year?
+Searched Memories: ['Scored a 31 on the ACT this year.', 'Scored an 85 on the placement test this year.', 'Scored 2200 on the SAT this year.', 'Scored a 95 on the final exam this year.', 'Scored a 92 on a quiz this year.', 'Scored an 80 on the midterm this year.', 'Scored a 76 on the assignment this year.', 'Scored 700 on the GMAT this year.', 'Scored 300 on the TOEFL this year.', 'Scored 1500 on the GRE this year.']
+LLM Response: You achieved a score of 31 on the ACT this year.
+Query: Did I score 76 on the assignment this year?
+Searched Memories: ['Scored a 76 on the assignment this year.', 'Scored a 92 on a quiz this year.', 'Scored an 80 on the midterm this year.', 'Scored an 85 on the placement test this year.', 'Scored a 95 on the final exam this year.', 'Scored a 31 on the ACT this year.', 'Scored 700 on the GMAT this year.', 'Scored 2200 on the SAT this year.', 'Scored 300 on the TOEFL this year.', 'Scored 1500 on the GRE this year.']
+LLM Response: Yes, you did score 76 on the assignment this year.
+
+
+Executing query testcases 2
+Query: What scores did I achieve on tests on what exams this year?
+Searched Memories: ['Scored a 95 on the final exam this year.', 'Scored a 92 on a quiz this year.', 'Scored an 85 on the placement test this year.', 'Scored 2200 on the SAT this year.', 'Scored an 80 on the midterm this year.', 'Scored a 76 on the assignment this year.', 'Scored a 31 on the ACT this year.', 'Scored 1500 on the GRE this year.', 'Scored 300 on the TOEFL this year.', 'Scored 700 on the GMAT this year.']
+LLM Response: This year, you achieved the following scores on various exams:
+
+- Final exam: 95
+- Quiz: 92
+- Placement test: 85
+- SAT: 2200
+- Midterm: 80
+- Assignment: 76
+- ACT: 31
+- GRE: 1500
+- TOEFL: 300
+- GMAT: 700
+
+
+Processing category: dates
+Stored statement: I went to Taiwan on February 28th earlier this year.
+Stored statement: I came back to the United States on March 12th earlier this year.
+Stored statement: I visited Japan on April 15th earlier this year.
+Stored statement: I attended a conference in Germany on May 3rd earlier this year.
+Stored statement: I traveled to Brazil on June 21st earlier this year.
+Stored statement: I returned from Canada on July 10th earlier this year.
+Stored statement: I went hiking in the Alps on August 5th earlier this year.
+Stored statement: I celebrated a friend's wedding in Italy on September 18th earlier this year.
+Stored statement: I visited the Great Wall of China on October 9th earlier this year.
+Stored statement: I returned home from Australia on November 22nd earlier this year.
+
+
+Outputing all user_id memories for validation
+Returned home from Australia on November 22nd earlier this year.
+Went to Taiwan on February 28th and returned to the United States on March 12th earlier this year. Visited Japan on April 15th earlier this year. Attended a conference in Germany on May 3rd earlier this year. Traveled to Brazil on June 21st earlier this year. Returned from Canada on July 10th earlier this year. Went hiking in the Alps on August 5th earlier this year. Celebrated a friend's wedding in Italy on September 18th earlier this year.
+Visited the Great Wall of China on October 9th earlier this year.
+
+
+Executing query testcases 1
+Query: Did I go to Taiwan earlier this year?
+Searched Memories: ["Went to Taiwan on February 28th and returned to the United States on March 12th earlier this year. Visited Japan on April 15th earlier this year. Attended a conference in Germany on May 3rd earlier this year. Traveled to Brazil on June 21st earlier this year. Returned from Canada on July 10th earlier this year. Went hiking in the Alps on August 5th earlier this year. Celebrated a friend's wedding in Italy on September 18th earlier this year.", 'Visited the Great Wall of China on October 9th earlier this year.', 'Returned home from Australia on November 22nd earlier this year.']
+LLM Response: Yes, you went to Taiwan earlier this year. You traveled there on February 28th and returned to the United States on March 12th.
+Query: When did I come back to the United States?
+Searched Memories: ["Went to Taiwan on February 28th and returned to the United States on March 12th earlier this year. Visited Japan on April 15th earlier this year. Attended a conference in Germany on May 3rd earlier this year. Traveled to Brazil on June 21st earlier this year. Returned from Canada on July 10th earlier this year. Went hiking in the Alps on August 5th earlier this year. Celebrated a friend's wedding in Italy on September 18th earlier this year.", 'Returned home from Australia on November 22nd earlier this year.', 'Visited the Great Wall of China on October 9th earlier this year.']
+LLM Response: You came back to the United States on March 12th earlier this year.
+Query: Did I visit Japan earlier this year?
+Searched Memories: ["Went to Taiwan on February 28th and returned to the United States on March 12th earlier this year. Visited Japan on April 15th earlier this year. Attended a conference in Germany on May 3rd earlier this year. Traveled to Brazil on June 21st earlier this year. Returned from Canada on July 10th earlier this year. Went hiking in the Alps on August 5th earlier this year. Celebrated a friend's wedding in Italy on September 18th earlier this year.", 'Visited the Great Wall of China on October 9th earlier this year.', 'Returned home from Australia on November 22nd earlier this year.']
+LLM Response: Yes, you visited Japan on April 15th earlier this year.
+Query: When did I attend a conference in Germany?
+Searched Memories: ["Went to Taiwan on February 28th and returned to the United States on March 12th earlier this year. Visited Japan on April 15th earlier this year. Attended a conference in Germany on May 3rd earlier this year. Traveled to Brazil on June 21st earlier this year. Returned from Canada on July 10th earlier this year. Went hiking in the Alps on August 5th earlier this year. Celebrated a friend's wedding in Italy on September 18th earlier this year.", 'Visited the Great Wall of China on October 9th earlier this year.', 'Returned home from Australia on November 22nd earlier this year.']
+LLM Response: You attended a conference in Germany on May 3rd earlier this year.
+Query: Did I travel to Brazil earlier this year?
+Searched Memories: ["Went to Taiwan on February 28th and returned to the United States on March 12th earlier this year. Visited Japan on April 15th earlier this year. Attended a conference in Germany on May 3rd earlier this year. Traveled to Brazil on June 21st earlier this year. Returned from Canada on July 10th earlier this year. Went hiking in the Alps on August 5th earlier this year. Celebrated a friend's wedding in Italy on September 18th earlier this year.", 'Returned home from Australia on November 22nd earlier this year.', 'Visited the Great Wall of China on October 9th earlier this year.']
+LLM Response: Yes, you traveled to Brazil on June 21st earlier this year.
+Query: When did I return from Canada?
+Searched Memories: ['Returned home from Australia on November 22nd earlier this year.', "Went to Taiwan on February 28th and returned to the United States on March 12th earlier this year. Visited Japan on April 15th earlier this year. Attended a conference in Germany on May 3rd earlier this year. Traveled to Brazil on June 21st earlier this year. Returned from Canada on July 10th earlier this year. Went hiking in the Alps on August 5th earlier this year. Celebrated a friend's wedding in Italy on September 18th earlier this year.", 'Visited the Great Wall of China on October 9th earlier this year.']
+LLM Response: You returned from Canada on July 10th earlier this year.
+Query: Did I go hiking in the Alps earlier this year?
+Searched Memories: ["Went to Taiwan on February 28th and returned to the United States on March 12th earlier this year. Visited Japan on April 15th earlier this year. Attended a conference in Germany on May 3rd earlier this year. Traveled to Brazil on June 21st earlier this year. Returned from Canada on July 10th earlier this year. Went hiking in the Alps on August 5th earlier this year. Celebrated a friend's wedding in Italy on September 18th earlier this year.", 'Visited the Great Wall of China on October 9th earlier this year.', 'Returned home from Australia on November 22nd earlier this year.']
+LLM Response: Yes, you went hiking in the Alps on August 5th earlier this year.
+Query: When did I celebrate a friend's wedding in Italy?
+Searched Memories: ["Went to Taiwan on February 28th and returned to the United States on March 12th earlier this year. Visited Japan on April 15th earlier this year. Attended a conference in Germany on May 3rd earlier this year. Traveled to Brazil on June 21st earlier this year. Returned from Canada on July 10th earlier this year. Went hiking in the Alps on August 5th earlier this year. Celebrated a friend's wedding in Italy on September 18th earlier this year.", 'Visited the Great Wall of China on October 9th earlier this year.', 'Returned home from Australia on November 22nd earlier this year.']
+LLM Response: You celebrated a friend's wedding in Italy on September 18th earlier this year.
+Query: Did I visit the Great Wall of China earlier this year?
+Searched Memories: ['Visited the Great Wall of China on October 9th earlier this year.', "Went to Taiwan on February 28th and returned to the United States on March 12th earlier this year. Visited Japan on April 15th earlier this year. Attended a conference in Germany on May 3rd earlier this year. Traveled to Brazil on June 21st earlier this year. Returned from Canada on July 10th earlier this year. Went hiking in the Alps on August 5th earlier this year. Celebrated a friend's wedding in Italy on September 18th earlier this year.", 'Returned home from Australia on November 22nd earlier this year.']
+LLM Response: Yes, you visited the Great Wall of China on October 9th earlier this year.
+Query: When did I return home from Australia?
+Searched Memories: ['Returned home from Australia on November 22nd earlier this year.', "Went to Taiwan on February 28th and returned to the United States on March 12th earlier this year. Visited Japan on April 15th earlier this year. Attended a conference in Germany on May 3rd earlier this year. Traveled to Brazil on June 21st earlier this year. Returned from Canada on July 10th earlier this year. Went hiking in the Alps on August 5th earlier this year. Celebrated a friend's wedding in Italy on September 18th earlier this year.", 'Visited the Great Wall of China on October 9th earlier this year.']
+LLM Response: You returned home from Australia on November 22nd earlier this year.
+
+
+Executing query testcases 2
+Query: What trips and events did I have earlier this year?
+Searched Memories: ["Went to Taiwan on February 28th and returned to the United States on March 12th earlier this year. Visited Japan on April 15th earlier this year. Attended a conference in Germany on May 3rd earlier this year. Traveled to Brazil on June 21st earlier this year. Returned from Canada on July 10th earlier this year. Went hiking in the Alps on August 5th earlier this year. Celebrated a friend's wedding in Italy on September 18th earlier this year.", 'Returned home from Australia on November 22nd earlier this year.', 'Visited the Great Wall of China on October 9th earlier this year.']
+LLM Response: Earlier this year, you had quite a few trips and events:
+
+- You went to Taiwan on February 28th and returned to the United States on March 12th.
+- You visited Japan on April 15th.
+- You attended a conference in Germany on May 3rd.
+- You traveled to Brazil on June 21st.
+- You returned from Canada on July 10th.
+- You went hiking in the Alps on August 5th.
+- You celebrated a friend's wedding in Italy on September 18th.
+- You visited the Great Wall of China on October 9th.
+- You returned home from Australia on November 22nd.

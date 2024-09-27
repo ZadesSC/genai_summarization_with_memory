@@ -1,0 +1,89 @@
+{
+    "nominal": {
+        "statements": [
+            "I will learn French this year.",
+            "I will learn Japanese this year.",
+            "I will learn Spanish this year.",
+            "I will learn German this year.",
+            "I will learn Mandarin this year.",
+            "I will learn Italian this year.",
+            "I will learn Russian this year.",
+            "I will learn Arabic this year.",
+            "I will learn Portuguese this year.",
+            "I will learn Korean this year."
+        ],
+        "query_testcases_1": [
+            "Did I plan to learn French this year?",
+            "Did I plan to learn Japanese this year?",
+            "Did I plan to learn Spanish this year?",
+            "Did I plan to learn German this year?",
+            "Did I plan to learn Mandarin this year?",
+            "Did I plan to learn Italian this year?",
+            "Did I plan to learn Russian this year?",
+            "Did I plan to learn Arabic this year?",
+            "Did I plan to learn Portuguese this year?",
+            "Did I plan to learn Korean this year?"
+        ],
+        "query_testcases_2": [
+            "What languages do I plan to learn this year?"
+        ]
+    },
+    "quantitative": {
+        "statements": [
+            "I have scored an 80 on the midterm this year.",
+            "I have scored a 2200 on the SAT this year.",
+            "I have scored a 95 on the final exam this year.",
+            "I have scored a 1500 on the GRE this year.",
+            "I have scored a 300 on the TOEFL this year.",
+            "I have scored an 85 on the placement test this year.",
+            "I have scored a 700 on the GMAT this year.",
+            "I have scored a 92 on the quiz this year.",
+            "I have scored a 31 on the ACT this year.",
+            "I have scored a 76 on the assignment this year."
+        ],
+        "query_testcases_1": [
+            "Did I score 80 on the midterm this year?",
+            "What score did I achieve on the SAT this year?",
+            "Did I score 95 on the final exam this year?",
+            "What score did I achieve on the GRE this year?",
+            "Did I score 300 on the TOEFL this year?",
+            "Did I score 85 on the placement test this year?",
+            "What score did I achieve on the GMAT this year?",
+            "Did I score 92 on the quiz this year?",
+            "What score did I achieve on the ACT this year?",
+            "Did I score 76 on the assignment this year?"
+        ],
+        "query_testcases_2": [
+            "What scores did I achieve on tests on what exams this year?"
+        ]
+    },
+    "dates": {
+        "statements": [
+            "I went to Taiwan on February 28th earlier this year.",
+            "I came back to the United States on March 12th earlier this year.",
+            "I visited Japan on April 15th earlier this year.",
+            "I attended a conference in Germany on May 3rd earlier this year.",
+            "I traveled to Brazil on June 21st earlier this year.",
+            "I returned from Canada on July 10th earlier this year.",
+            "I went hiking in the Alps on August 5th earlier this year.",
+            "I celebrated a friend's wedding in Italy on September 18th earlier this year.",
+            "I visited the Great Wall of China on October 9th earlier this year.",
+            "I returned home from Australia on November 22nd earlier this year."
+        ],
+        "query_testcases_1": [
+            "Did I go to Taiwan earlier this year?",
+            "When did I come back to the United States?",
+            "Did I visit Japan earlier this year?",
+            "When did I attend a conference in Germany?",
+            "Did I travel to Brazil earlier this year?",
+            "When did I return from Canada?",
+            "Did I go hiking in the Alps earlier this year?",
+            "When did I celebrate a friend's wedding in Italy?",
+            "Did I visit the Great Wall of China earlier this year?",
+            "When did I return home from Australia?"
+        ],
+        "query_testcases_2": [
+            "What trips and events did I have earlier this year?"
+        ]
+    }
+}

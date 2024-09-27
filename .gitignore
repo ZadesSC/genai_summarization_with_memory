@@ -1,5 +1,10 @@
-# Ignore the .env file
+# Ignore files
 .env
+*.db
+*.egg-info
+*.pyc
 
-#Ignore venv
+# Ignore venv
 .venv/
+__pycache__
+

@@ -45,6 +45,23 @@ You can customize the behavior of the program using external configuration files
 
 The tool is designed around several subcommands, allowing you to fetch, store, query, and interact with research papers and memory storage. Below are examples of each command.
 
+You can either call the main.py file directory, or run it as a python program.
+   ```bash
+   python src/papers/main.py
+   ```
+ 
+Running it as a python program requires installing it first.
+   ```bash
+   pip install -e .
+   python -m papers.main
+   ```
+
+You can run it direcly as a program (NOTE this is currently broken on Windows)
+   ```bash
+   pip install -e .
+   paper-manager
+   ```
+
 ### Main Command
 
 The main command fetches research papers from a specified source URL (default: Hugging Face), stores them in the SQLite database and the mem0 memory system, and processes the papers for future reference.
