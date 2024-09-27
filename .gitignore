@@ -7,4 +7,4 @@
 # Ignore venv
 .venv/
 __pycache__
-
+build/
