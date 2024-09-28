@@ -12,8 +12,8 @@ setup(
     name='genai_app_utils',
     version='0.1',
     description="Shared utilities and modules for GENAI summarization project",
-    package_dir={'': 'genai_app_utils'},
-    packages=find_packages(where='genai_app_utils'),
+    package_dir={'': 'src'},
+    packages=find_packages(where='src'),
     python_requires=">=3.11",
     install_requires=requirements,
 )

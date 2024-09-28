@@ -3,7 +3,7 @@
 import os
 import sys
 
-#sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../genai_app_utils/src')))
 
 import argparse
 from genai_app_utils.config.config import Config
