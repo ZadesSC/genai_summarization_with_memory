@@ -16,7 +16,8 @@ from genai_app_utils.memory.memory import (
     cleanup_qdrant, 
     format_memories
 )
-from genai_app_utils.llm.llm import generate_llm_response
+from genai_app_utils.llm.llm import generate_llm_response, create_prompt
+from genai_app_utils.config.config import Config
 
 # Set up environment variables and logging
 load_dotenv()
@@ -57,7 +58,7 @@ def setup_mem0_memory(config, model_name, deployment_name, config_file=None):
     return get_mem0_memory(config, model_name=model_name, deployment_name=deployment_name, config_file=config_file)
 
 
-def process_queries(memory, memories, queries, user_id, result_list, llm):
+def process_queries(memory, memories, config, queries, user_id, result_list, llm, deployment_name):
     """
     Process a list of queries and store the results.
 
@@ -77,15 +78,17 @@ def process_queries(memory, memories, queries, user_id, result_list, llm):
             response = memory.search(query, user_id=user_id)
             formatted_response = format_memories(response)
             result_list.append({"query": query, "response": formatted_response})
+
+            prompt = create_prompt(formatted_response, query)
             print(f"Query: {query}")
             print(f"Searched Memories: {formatted_response}")
-            print("LLM Response:", generate_llm_response(formatted_response, deployment_name=llm, config=config))
+            print("LLM Response:", generate_llm_response(prompt, deployment_name=deployment_name, config=config))
         except Exception as e:
             logging.error(f"Error processing query: {query}: {e}")
             continue
 
 
-def parse_and_test_json(memory, json_file, llm):
+def parse_and_test_json(memory, json_file, llm, deployment_name, config):
     """
     Parse a JSON file containing test cases and use memory and LLM for testing.
 
@@ -119,11 +122,11 @@ def parse_and_test_json(memory, json_file, llm):
 
         # Process query testcases 1
         print("\nExecuting query testcases 1")
-        process_queries(memory, formatted_memories, content["query_testcases_1"], category_user_id, results[category]["query_testcases_1"], llm)
+        process_queries(memory, formatted_memories, config, content["query_testcases_1"], category_user_id, results[category]["query_testcases_1"], llm, deployment_name)
 
         # Process query testcases 2
         print("\nExecuting query testcases 2")
-        process_queries(memory, formatted_memories, content["query_testcases_2"], category_user_id, results[category]["query_testcases_2"], llm)
+        process_queries(memory, formatted_memories, config, content["query_testcases_2"], category_user_id, results[category]["query_testcases_2"], llm, deployment_name)
 
     return results
 
@@ -152,7 +155,7 @@ def main():
     memory = setup_mem0_memory(config, model_name=args.model, deployment_name=args.deployment_name, config_file=args.config_file)
 
     # Run tests and parse the input JSON file
-    results = parse_and_test_json(memory, args.input, args.model)
+    results = parse_and_test_json(memory, args.input, args.model, args.deployment_name, config=config)
 
     # Restore original stdout if it was redirected
     if args.output:

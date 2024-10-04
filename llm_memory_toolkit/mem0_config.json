@@ -1,0 +1,26 @@
+{
+    "vector_store": {
+        "provider": "qdrant",
+        "config": {
+            "collection_name": "gpt4_memory",
+            "embedding_model_dims": 1536,
+            "host": "162.168.50.168",
+            "port": "6333"
+        }
+    },
+    "llm": {
+        "provider": "azure_openai",
+        "config": {
+            "model": "w1",
+            "temperature": 0,
+            "max_tokens": 2000
+        }
+    },
+    "embedder": {
+        "provider": "azure_openai",
+        "config": {
+            "model": "text-ada-embedding-002-2"
+        }
+    },
+    "version": "v1.1"
+}

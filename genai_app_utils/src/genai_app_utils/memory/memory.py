@@ -131,14 +131,19 @@ def format_memories(raw_memories):
     Format raw memory entries for display.
 
     Parameters:
-        - raw_memories (dict): The raw memory entries to format.
+        - raw_memories (dict): The raw memory entries to format, with 'results' as the key.
 
     Returns:
         - list: A list of formatted memory strings.
     """
-    if not isinstance(raw_memories, dict):
+    # Check if raw_memories is a dictionary and contains 'results'
+    if not isinstance(raw_memories, dict) or 'results' not in raw_memories:
+        logging.warning(f"Unexpected memory format: {raw_memories}")
         return []
-    return [memory_data.get("memory", "No memory text") for memory_data in raw_memories.get("memories", [])]
+
+    # Extract and format each memory entry from 'results'
+    return [memory_data.get("memory", "No memory text") for memory_data in raw_memories.get('results', [])]
+
 
 
 def cleanup_qdrant():
