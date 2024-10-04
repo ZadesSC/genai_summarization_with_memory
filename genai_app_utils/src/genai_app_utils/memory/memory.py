@@ -3,6 +3,7 @@
 import json
 import os
 import logging
+import time
 from mem0 import Memory
 from genai_app_utils.config.config import Config
 
@@ -14,7 +15,7 @@ RETRIES_ATTEMPT = 3
 RETRY_DELAY = 5
 
 
-def get_mem0_memory(config, model_name='w1', config_file=None):
+def get_mem0_memory(config, model_name='gpt4', deployment_name='w1', config_file=None):
     """
     Set up Mem0 memory instance with the provided configuration.
 
@@ -31,18 +32,18 @@ def get_mem0_memory(config, model_name='w1', config_file=None):
         with open(config_file, 'r') as file:
             mem0_config = json.load(file)
     else:
-        mem0_config = _generate_default_mem0_config(config, model_name)
+        mem0_config = _generate_default_mem0_config(config, deployment_name)
 
     return Memory.from_config(mem0_config)
 
 
-def _generate_default_mem0_config(config, model_name):
+def _generate_default_mem0_config(config, deployment_name):
     """
     Generate a default Mem0 configuration dictionary based on the provided config and model name.
 
     Parameters:
         - config (Config): Configuration object holding LLM and API settings.
-        - model_name (str): The name of the model to use in the memory configuration.
+        - deployment_name (str): The deployment name of the model to use in the memory configuration.
 
     Returns:
         - dict: A default configuration dictionary for the Mem0 memory.
@@ -60,7 +61,7 @@ def _generate_default_mem0_config(config, model_name):
         "llm": {
             "provider": "azure_openai",
             "config": {
-                "model": model_name,
+                "model": deployment_name,
                 "temperature": 0,
                 "max_tokens": 2000,
             }

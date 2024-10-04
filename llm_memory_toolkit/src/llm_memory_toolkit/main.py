@@ -42,7 +42,7 @@ class Tee:
         self.log.flush()
 
 
-def setup_mem0_memory(config, model_name, config_file=None):
+def setup_mem0_memory(config, model_name, deployment_name, config_file=None):
     """
     Set up the Mem0 memory instance for a specific model using a configuration file if provided.
 
@@ -54,7 +54,7 @@ def setup_mem0_memory(config, model_name, config_file=None):
     Returns:
         - Memory: The Mem0 memory instance configured with the specified settings.
     """
-    return get_mem0_memory(config, model_name=model_name, config_file=config_file)
+    return get_mem0_memory(config, model_name=model_name, deployment_name=deployment_name, config_file=config_file)
 
 
 def process_queries(memory, memories, queries, user_id, result_list, llm):
@@ -133,6 +133,7 @@ def main():
     parser = argparse.ArgumentParser(description="LLM Memory Test Utility")
     parser.add_argument("--input", required=True, help="Input JSON file containing test cases.")
     parser.add_argument("--model", required=True, choices=["llama", "gpt4", "gpt35"], help="Model to use for testing.")
+    parser.add_argument("--deployment_name", required=False, help="Deployment name of the model.")
     parser.add_argument("--config-file", required=False, help="Optional path to a Mem0 configuration file.")
     parser.add_argument("--output", required=False, help="Optional output file for logging results.")
     args = parser.parse_args()
@@ -148,7 +149,7 @@ def main():
     cleanup_qdrant()
 
     # Set up the Mem0 memory instance based on the provided model
-    memory = setup_mem0_memory(config, model_name=args.model, config_file=args.config_file)
+    memory = setup_mem0_memory(config, model_name=args.model, deployment_name=args.deployment_name, config_file=args.config_file)
 
     # Run tests and parse the input JSON file
     results = parse_and_test_json(memory, args.input, args.model)
