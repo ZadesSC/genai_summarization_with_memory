@@ -1,6 +1,13 @@
 import sqlite3
 import logging
 
+import os
+from qdrant_client import QdrantClient
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
 PAPER_DB_NAME = 'daily_papers.db'
 
 def create_database():

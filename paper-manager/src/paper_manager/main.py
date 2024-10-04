@@ -12,6 +12,7 @@ from genai_app_utils.memory.memory import get_mem0_memory, query_papers_memory
 from genai_app_utils.papers.papers import process_daily_papers
 from genai_app_utils.llm.llm import generate_llm_response
 
+
 def query_memory_command(config, config_file):
     """Subcommand to query stored memories."""
     mem0_memory = get_mem0_memory(config, config_file=config_file)
@@ -44,7 +45,7 @@ def ask_llm_command(config, question, include_memory, config_file):
         else:
             print("No relevant memories found.")
 
-    response = generate_llm_response(prompt, 'w1', config)
+    response = generate_llm_response(prompt, deployment_name="w1", config=config, llm_model="azure", timeout=120)
     print(f"LLM Response:\n{response}")
 
 

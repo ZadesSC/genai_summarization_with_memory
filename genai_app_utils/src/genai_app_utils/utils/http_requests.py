@@ -1,19 +1,19 @@
 import requests
 
-def make_http_request(url, method="GET", headers=None, params=None, data=None, json_data=None, return_type="json"):
+def make_http_request(url, method="GET", headers=None, params=None, data=None, json_data=None, return_type="json", timeout=60):
     """Make HTTP requests with support for different methods, headers, and return types."""
     try:
         method = method.upper()
         response = None
 
         if method == "GET":
-            response = requests.get(url, headers=headers, params=params)
+            response = requests.get(url, headers=headers, params=params, timeout=timeout)
         elif method == "POST":
-            response = requests.post(url, headers=headers, params=params, data=data, json=json_data)
+            response = requests.post(url, headers=headers, params=params, data=data, json=json_data, timeout=timeout)
         elif method == "PUT":
-            response = requests.put(url, headers=headers, params=params, data=data, json=json_data)
+            response = requests.put(url, headers=headers, params=params, data=data, json=json_data, timeout=timeout)
         elif method == "DELETE":
-            response = requests.delete(url, headers=headers, params=params)
+            response = requests.delete(url, headers=headers, params=params, timeout=timeout)
         else:
             return f"Error: Unsupported HTTP method '{method}'"
 
