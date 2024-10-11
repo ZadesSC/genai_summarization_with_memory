@@ -1,42 +1,48 @@
-{
-    "nominal": {
+[
+    {
+        "test_name": "test case 1",
         "statements": [
-            "I will learn French this year.",
-            "I will learn Japanese this year."
+            {"operation": "add", "content": "I will learn French this year."}
         ],
-        "query_testcases_1": [
-            "Did I plan to learn French this year?",
-            "Did I plan to learn Japanese this year?"
-        ],
-        "query_testcases_2": [
-            "What languages do I plan to learn this year?"
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Did I plan to learn French this year? Only anaswer 'Yes' or 'No' ",
+                "expected_answer": "Yes"
+            }
         ]
     },
-    "quantitative": {
+    {
+        "test_name": "test case 2",
         "statements": [
-            "I have scored an 80 on the midterm this year.",
-            "I have scored a 2200 on the SAT this year."
+            {"operation": "add", "content": "I will learn Japanese this year."},
+            {"operation": "add", "content": "I decided to learn Spanish instead of Japanese this year."}
         ],
-        "query_testcases_1": [
-            "Did I score 80 on the test this year?",
-            "What score did I achieve on the SAT this year?"
-        ],
-        "query_testcases_2": [
-            "What scores did I achieve on tests and exams this year?"
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Did I plan to learn Spanish this year? Only anaswer 'Yes' or 'No' ",
+                "expected_answer": "Yes"
+            },
+            {
+                "operation": "ask",
+                "content": "Did I plan to learn Japanese this year?  Only anaswer 'Yes' or 'No' ",
+                "expected_answer": "No"
+            }
         ]
     },
-    "dates": {
+    {
+        "test_name": "test case 3",
         "statements": [
-            "I came back to the United States on March 12th earlier this year.",
-            "I went to Taiwan on February 28th earlier this year."
+            {"operation": "add", "content": "I will learn German this year."},
+            {"operation": "add", "content": "I have decided not to learn German this year."}
         ],
-        "query_testcases_1": [
-            "When did I come back to the United States?",
-            "Did I go to Taiwan earlier this year?"
-
-        ],
-        "query_testcases_2": [
-            "What trips and events did I have earlier this year?"
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Did I plan to learn German this year?  Only anaswer 'Yes' or 'No'",
+                "expected_answer": "No"
+            }
         ]
     }
-}
+]

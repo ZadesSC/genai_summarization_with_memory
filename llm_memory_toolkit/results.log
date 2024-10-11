@@ -1,0 +1,66 @@
+Deleted collection: papers_collection
+Deleted collection: azure_gpt35
+Deleted collection: azure_gpt40
+Deleted collection: ollama
+
+Processing category: nominal
+Stored statement: I will learn French this year.
+Stored statement: I will learn Japanese this year.
+
+Outputting all user_id memories for validation
+Will learn Japanese this year
+
+Executing query testcases 1
+Query: Did I plan to learn French this year?
+Searched Memories: ['Will learn Japanese this year']
+LLM Response: Based on the information I have, you planned to learn Japanese this year, not French.
+Query: Did I plan to learn Japanese this year?
+Searched Memories: ['Will learn Japanese this year']
+LLM Response: Yes, you did plan to learn Japanese this year.
+
+Executing query testcases 2
+Query: What languages do I plan to learn this year?
+Searched Memories: ['Will learn Japanese this year']
+LLM Response: You plan to learn Japanese this year.
+
+Processing category: quantitative
+Stored statement: I have scored an 80 on the midterm this year.
+Stored statement: I have scored a 2200 on the SAT this year.
+
+Outputting all user_id memories for validation
+Scored an 80 on the midterm this year
+Scored a 2200 on the SAT this year
+
+Executing query testcases 1
+Query: Did I score 80 on the test this year?
+Searched Memories: ['Scored an 80 on the midterm this year', 'Scored a 2200 on the SAT this year']
+LLM Response: Yes, you did score 80 on the midterm this year.
+Query: What score did I achieve on the SAT this year?
+Searched Memories: ['Scored a 2200 on the SAT this year', 'Scored an 80 on the midterm this year']
+LLM Response: You achieved a score of 2200 on the SAT this year.
+
+Executing query testcases 2
+Query: What scores did I achieve on tests and exams this year?
+Searched Memories: ['Scored an 80 on the midterm this year', 'Scored a 2200 on the SAT this year']
+LLM Response: This year, you scored an 80 on the midterm and a 2200 on the SAT.
+
+Processing category: dates
+Stored statement: I came back to the United States on March 12th earlier this year.
+Stored statement: I went to Taiwan on February 28th earlier this year.
+
+Outputting all user_id memories for validation
+Came back to the United States on March 12th earlier this year
+Went to Taiwan on February 28th earlier this year
+
+Executing query testcases 1
+Query: When did I come back to the United States?
+Searched Memories: ['Came back to the United States on March 12th earlier this year', 'Went to Taiwan on February 28th earlier this year']
+LLM Response: You came back to the United States on March 12th earlier this year.
+Query: Did I go to Taiwan earlier this year?
+Searched Memories: ['Went to Taiwan on February 28th earlier this year', 'Came back to the United States on March 12th earlier this year']
+LLM Response: Yes, you went to Taiwan earlier this year on February 28th and returned to the United States on March 12th.
+
+Executing query testcases 2
+Query: What trips and events did I have earlier this year?
+Searched Memories: ['Went to Taiwan on February 28th earlier this year', 'Came back to the United States on March 12th earlier this year']
+LLM Response: Earlier this year, you went on a trip to Taiwan on February 28th and returned to the United States on March 12th.

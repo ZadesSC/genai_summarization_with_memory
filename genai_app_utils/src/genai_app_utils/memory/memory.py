@@ -14,13 +14,27 @@ PAPER_QDRANT_COLLECTION_NAME = "papers_collection"
 RETRIES_ATTEMPT = 3
 RETRY_DELAY = 5
 
+def get_mem0_memory(mem0_config):
+    """
+    Set up Mem0 memory instance with the provided configuration.
+
+    Parameters:
+        - config (Config): Mem0 configuration file location
+
+    Returns:
+        - Memory: An instance of Memory set up with the specified configuration.
+    """
+    if mem0_config and os.path.exists(mem0_config):
+        with open(mem0_config, 'r') as file:
+            mem0_config = json.load(file)
+    return Memory.from_config(mem0_config)
 
 def get_mem0_memory(config, model_name='gpt4', deployment_name='w1', config_file=None):
     """
     Set up Mem0 memory instance with the provided configuration.
 
     Parameters:
-        - config (Config): Configuration object holding LLM and API settings.
+        - config (Config): Mem0 configuration file
         - model_name (str): The name of the model to use in the memory configuration.
         - config_file (str): Optional path to a configuration file for the memory.
 
@@ -54,8 +68,8 @@ def _generate_default_mem0_config(config, deployment_name):
             "config": {
                 "collection_name": PAPER_QDRANT_COLLECTION_NAME,
                 "embedding_model_dims": 1536,
-                "host": config.qdrant_url,
-                "port": config.qdrant_port,
+                #"host": config.qdrant_url,
+                #"port": config.qdrant_port,
             }
         },
         "llm": {
@@ -145,7 +159,7 @@ def format_memories(raw_memories):
     return [memory_data.get("memory", "No memory text") for memory_data in raw_memories.get('results', [])]
 
 
-
+# Old ver, deprec
 def cleanup_qdrant():
     """
     Clean up all Qdrant collections related to papers and LLM models.
@@ -157,6 +171,43 @@ def cleanup_qdrant():
     qdrant_url = os.getenv("QDRANT_URL")
     qdrant_port = os.getenv("QDRANT_PORT")
     client = QdrantClient(host=qdrant_url, port=qdrant_port)
+
+    collections_to_delete = [
+        PAPER_QDRANT_COLLECTION_NAME,
+        "azure_gpt35",
+        "azure_gpt40",
+        "ollama"
+    ]
+
+    for collection in collections_to_delete:
+        try:
+            client.delete_collection(collection)
+            print(f"Deleted collection: {collection}")
+        except Exception as e:
+            logging.error(f"Error deleting collection {collection}: {e}")
+
+
+def cleanup_qdrant(memory_config):
+    """
+    Clean up all Qdrant collections related to papers and LLM models.
+
+    This function deletes collections for 'papers_collection', 'azure_gpt35', 'azure_gpt40', and 'ollama'.
+
+    Parameters:
+        - memory_config (dict): The mem0 config imported as a dict
+    """
+    from qdrant_client import QdrantClient
+
+    if 'host' not in memory_config['vector_store']['config']:
+        #client = QdrantClient(in_memory=True)
+        qdrant_url = "localhost"
+        qdrant_port = "6333"
+        client = QdrantClient(host=qdrant_url, port=qdrant_port)
+
+    else:
+        qdrant_url = memory_config['vector_store']['config']['host']
+        qdrant_port = memory_config['vector_store']['config']['port']
+        client = QdrantClient(host=qdrant_url, port=qdrant_port)
 
     collections_to_delete = [
         PAPER_QDRANT_COLLECTION_NAME,

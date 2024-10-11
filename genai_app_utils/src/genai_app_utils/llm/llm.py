@@ -5,6 +5,7 @@ import logging
 from genai_app_utils.utils.http_requests import make_http_request
 
 # Define the LLM functions and configurations in a consolidated manner
+# TODO: Deprectate this, use below, check paper_manager to remove this usage
 def generate_llm_response(prompt, deployment_name, config, llm_model="azure", timeout=60):
     """
     Generate a response from the specified LLM model. Defaults to Azure LLM.
@@ -16,7 +17,7 @@ def generate_llm_response(prompt, deployment_name, config, llm_model="azure", ti
         - llm_model (str): The LLM provider/model to use ('azure', 'ollama', etc.).
         - timeout (int): The timeout for the HTTP request in seconds.
     """
-    if llm_model == "azure":
+    if llm_model == "azure" or llm_model == 'azure_openai':
         return generate_azure_llm_response(prompt, deployment_name, config, timeout)
     elif llm_model == "ollama":
         return generate_llm_response_ollama(prompt, deployment_name, config, timeout)
@@ -24,6 +25,25 @@ def generate_llm_response(prompt, deployment_name, config, llm_model="azure", ti
         logging.error(f"Unsupported LLM model: {llm_model}")
         return None
 
+# new version
+def generate_llm_response(prompt, provider_name, deployment_name, config, timeout=60):
+    """
+    Generate a response from the specified LLM model. Defaults to Azure LLM.
+
+    Parameters:
+        - prompt (str): The prompt to send to the LLM.
+        - deployment_name (str): The deployment name or model to use.
+        - config (Config): The configuration object holding LLM settings.
+        - llm_model (str): The LLM provider/model to use ('azure', 'ollama', etc.).
+        - timeout (int): The timeout for the HTTP request in seconds.
+    """
+    if provider_name == "azure_openai":
+        return generate_azure_llm_response(prompt, deployment_name, config, timeout)
+    elif provider_name == "ollama":
+        return generate_llm_response_ollama(prompt, deployment_name, config, timeout)
+    else:
+        logging.error(f"Unsupported LLM provider: {provider_name}")
+        return None
 
 def generate_azure_llm_response(prompt, deployment_name, config, timeout=60):
     """

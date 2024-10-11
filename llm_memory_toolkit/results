@@ -1,0 +1,47 @@
+Deleted collection: papers_collection
+Deleted collection: azure_gpt35
+Deleted collection: azure_gpt40
+Deleted collection: ollama
+
+Processing test case: test case 1
+Stored statement: I will learn French this year.
+Added to memory: I will learn French this year.
+
+Current memories:
+Will learn French this year
+Query: Did I plan to learn French this year? Only anaswer 'Yes' or 'No' 
+Expected Answer: Yes
+LLM Response: Yes
+Result: Correct
+
+
+Processing test case: test case 2
+Stored statement: I will learn Japanese this year.
+Added to memory: I will learn Japanese this year.
+Stored statement: I decided to learn Spanish instead of Japanese this year.
+Added to memory: I decided to learn Spanish instead of Japanese this year.
+
+Current memories:
+Query: Did I plan to learn Spanish this year? Only anaswer 'Yes' or 'No' 
+Expected Answer: Yes
+LLM Response: No
+Result: Incorrect
+
+Query: Did I plan to learn Japanese this year?  Only anaswer 'Yes' or 'No' 
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+
+Processing test case: test case 3
+Stored statement: I will learn German this year.
+Added to memory: I will learn German this year.
+Stored statement: I have decided not to learn German this year.
+Added to memory: I have decided not to learn German this year.
+
+Current memories:
+Query: Did I plan to learn German this year?  Only anaswer 'Yes' or 'No'
+Expected Answer: No
+LLM Response: No
+Result: Correct
+

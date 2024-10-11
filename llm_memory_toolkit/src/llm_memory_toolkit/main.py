@@ -11,151 +11,212 @@ from dotenv import load_dotenv
 # Import from the genai_app_utils module
 from genai_app_utils.config.config import Config
 from genai_app_utils.memory.memory import (
-    get_mem0_memory, 
-    store_statements_in_memory, 
-    cleanup_qdrant, 
+    get_mem0_memory,
+    store_statements_in_memory,
+    cleanup_qdrant,
     format_memories
 )
 from genai_app_utils.llm.llm import generate_llm_response, create_prompt
 from genai_app_utils.config.config import Config
+from genai_app_utils.utils.tee import Tee
 
-# Set up environment variables and logging
-load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Set up the config object for environment variables
+config = Config()
+
+# Saves mem0 config for use later
+mem0_config = None
 
 # Constants for retry mechanism
 RETRIES_ATTEMPT = 3
 RETRY_DELAY = 5
 
-
-# Define a utility class to redirect stdout to both terminal and file
-class Tee:
-    def __init__(self, output_file):
-        self.terminal = sys.stdout
-        self.log = open(output_file, 'w')
-
-    def write(self, message):
-        self.terminal.write(message)
-        self.log.write(message)
-
-    def flush(self):
-        self.terminal.flush()
-        self.log.flush()
+# Database values
+DATABASE_NAME = "memory_toolkit"
 
 
-def setup_mem0_memory(config, model_name, deployment_name, config_file=None):
+def setup_mem0_memory(mem0_config=None):
     """
     Set up the Mem0 memory instance for a specific model using a configuration file if provided.
 
     Parameters:
-        - config (Config): Configuration object holding LLM and API settings.
-        - model_name (str): The model name to use (e.g., 'llama', 'gpt35', 'gpt4').
-        - config_file (str): Optional path to a memory configuration file.
+        - config (Config): Mem0 configuration file
 
     Returns:
         - Memory: The Mem0 memory instance configured with the specified settings.
     """
-    return get_mem0_memory(config, model_name=model_name, deployment_name=deployment_name, config_file=config_file)
+    return get_mem0_memory(mem0_config)
 
 
-def process_queries(memory, memories, config, queries, user_id, result_list, llm, deployment_name):
+def add_statement_to_memory(memory, content, user_id):
+    store_statements_in_memory(memory, content, user_id)
+
+
+def update_statement_in_memory(memory, old_content, new_content, user_id):
     """
-    Process a list of queries and store the results.
+    Update a statement in memory by deleting the old one and adding the new one.
 
     Parameters:
-        - memory (Memory): The Mem0 memory instance to search and store results in.
-        - memories (list): A list of formatted memories to use as context.
-        - queries (list): A list of query strings to process.
-        - user_id (str): The user ID associated with the queries.
-        - result_list (list): A list to store the results of the queries.
-        - llm (str): The LLM model to use for the queries.
+        - memory (Memory): The Mem0 memory instance.
+        - old_content (str): The old statement content to be updated.
+        - new_content (str): The new statement content.
+        - user_id (str): The user ID associated with the statements.
 
     Returns:
         - None
     """
-    for query in queries:
-        try:
-            response = memory.search(query, user_id=user_id)
-            formatted_response = format_memories(response)
-            result_list.append({"query": query, "response": formatted_response})
-
-            prompt = create_prompt(formatted_response, query)
-            print(f"Query: {query}")
-            print(f"Searched Memories: {formatted_response}")
-            print("LLM Response:", generate_llm_response(prompt, deployment_name=deployment_name, config=config))
-        except Exception as e:
-            logging.error(f"Error processing query: {query}: {e}")
-            continue
+    #delete_statement_from_memory(memory, old_content, user_id)
+    #add_statement_to_memory(memory, new_content, user_id)
+    pass
 
 
-def parse_and_test_json(memory, json_file, llm, deployment_name, config):
+def delete_statement_from_memory(memory, content, user_id):
+    """
+    Delete a statement from memory.
+
+    Parameters:
+        - memory (Memory): The Mem0 memory instance.
+        - content (str): The statement content to be deleted.
+        - user_id (str): The user ID associated with the statements.
+
+    Returns:
+        - None
+    """
+    # Assuming the memory instance has a delete method
+    #memory.delete(content, user_id=user_id)
+    pass
+
+
+def parse_and_test_json(memory, test_file, provider_name, model_name):
     """
     Parse a JSON file containing test cases and use memory and LLM for testing.
 
     Parameters:
         - memory (Memory): The Mem0 memory instance to store and query memories.
-        - json_file (str): The path to the JSON file containing test cases.
-        - llm (str): The LLM model to use for testing.
+        - test_file (str): The path to the JSON file containing test cases.
+        - provider_name: The provider as given in mem0 config.
+        - model_name (str): The model as given in mem0 config.
 
     Returns:
         - dict: The results of the test cases.
     """
-    with open(json_file, 'r') as f:
+    with open(test_file, 'r') as f:
         data = json.load(f)
 
     results = {}
-    for category, content in data.items():
-        print(f"\nProcessing category: {category}")
-        results[category] = {"query_testcases_1": [], "query_testcases_2": []}
+    for test_case in data:
+        test_name = test_case.get('test_name', 'Unnamed Test')
+        print(f"\nProcessing test case: {test_name}")
+        results[test_name] = {"queries": []}
 
-        category_user_id = f"{llm}_{category}"
+        user_id = f"{provider_name}_{test_name}"
 
-        # Store statements in memory
-        for statement in content["statements"]:
-            store_statements_in_memory(memory, statement, category_user_id)
+        # Process statements (add, update, delete)
+        for statement in test_case.get('statements', []):
+            operation = statement.get('operation', 'add')
+            content = statement.get('content', '')
 
-        print("\nOutputting all user_id memories for validation")
-        user_memories = memory.get_all(category_user_id)
+            if operation == 'add':
+                add_statement_to_memory(memory, content, user_id)
+                print(f"Added to memory: {content}")
+            elif operation == 'update':
+                old_content = statement.get('old_content', '')
+                new_content = content
+                update_statement_in_memory(memory, old_content, new_content, user_id)
+                print(f"Updated memory: '{old_content}' to '{new_content}'")
+            elif operation == 'delete':
+                delete_statement_from_memory(memory, content, user_id)
+                print(f"Deleted from memory: {content}")
+            else:
+                logging.error(f"Unknown operation: {operation}")
+
+        # Output all user_id memories for validation
+        print("\nCurrent memories:")
+        user_memories = memory.get_all(user_id)
         formatted_memories = format_memories(user_memories)
         for single_memory in formatted_memories:
             print(single_memory)
 
-        # Process query testcases 1
-        print("\nExecuting query testcases 1")
-        process_queries(memory, formatted_memories, config, content["query_testcases_1"], category_user_id, results[category]["query_testcases_1"], llm, deployment_name)
+        # Process queries
+        for query in test_case.get('queries', []):
+            operation = query.get('operation')
+            query_content = query.get('content', '')
+            expected_answer = query.get('expected_answer', None)
 
-        # Process query testcases 2
-        print("\nExecuting query testcases 2")
-        process_queries(memory, formatted_memories, config, content["query_testcases_2"], category_user_id, results[category]["query_testcases_2"], llm, deployment_name)
+            if operation == 'ask':
+                try:
+                    # Perform the search operation to retrieve relevant memories
+                    response = memory.search(query_content, user_id=user_id)
+                    formatted_response = format_memories(response)
+
+                    # Create a prompt and get an LLM response
+                    prompt = create_prompt(formatted_response, query_content)
+                    llm_response = generate_llm_response(prompt=prompt, provider_name=provider_name, deployment_name=model_name, config=config)
+
+                    # Compare llm_response to expected_answer if it exists
+                    is_correct = None
+                    if expected_answer is not None:
+                        is_correct = (llm_response.strip().lower() == expected_answer.strip().lower())
+
+                    results[test_name]["queries"].append({
+                        "query": query_content,
+                        "expected_answer": expected_answer,
+                        "llm_response": llm_response,
+                        "is_correct": is_correct
+                    })
+
+                    # Print the results in a readable format
+                    print(f"Query: {query_content}")
+                    if expected_answer is not None:
+                        print(f"Expected Answer: {expected_answer}")
+                    print(f"LLM Response: {llm_response}")
+                    if is_correct is not None:
+                        print(f"Result: {'Correct' if is_correct else 'Incorrect'}\n")
+                    else:
+                        print("No expected answer provided for comparison.\n")
+
+                except Exception as e:
+                    logging.error(f"Error processing query: {query_content}: {e}")
+                    continue
+            elif operation == 'search':
+                # Implement additional logic for 'search' operation if needed
+                pass
+            else:
+                logging.error(f"Unknown query operation: {operation}")
 
     return results
-
 
 def main():
     # Parse command-line arguments
     parser = argparse.ArgumentParser(description="LLM Memory Test Utility")
-    parser.add_argument("--input", required=True, help="Input JSON file containing test cases.")
-    parser.add_argument("--model", required=True, choices=["llama", "gpt4", "gpt35"], help="Model to use for testing.")
-    parser.add_argument("--deployment_name", required=False, help="Deployment name of the model.")
-    parser.add_argument("--config-file", required=False, help="Optional path to a Mem0 configuration file.")
+    parser.add_argument("--input-test-cases", required=True, help="Input JSON file containing test cases.")
+    parser.add_argument("--mem0-config", required=True, help="Required path to a Mem0 configuration file.")
     parser.add_argument("--output", required=False, help="Optional output file for logging results.")
     args = parser.parse_args()
-
-    # Set up the config object
-    config = Config()
 
     # Redirect stdout to both terminal and file if the output argument is provided
     if args.output:
         sys.stdout = Tee(args.output)
 
-    # Clean up existing Qdrant collections before starting tests
-    cleanup_qdrant()
+        # Set up the Mem0 memory instance based on the provided model
+    MEM0_CONFIG_PATH = args.mem0_config
 
-    # Set up the Mem0 memory instance based on the provided model
-    memory = setup_mem0_memory(config, model_name=args.model, deployment_name=args.deployment_name, config_file=args.config_file)
+    # Load mem0 config into json object
+    if MEM0_CONFIG_PATH and os.path.exists(MEM0_CONFIG_PATH):
+        with open(MEM0_CONFIG_PATH, 'r') as file:
+            mem0_config = json.load(file)
+
+    # Clean up existing Qdrant collections before starting tests
+    cleanup_qdrant(mem0_config)
+
+    llm_provider = mem0_config['llm']['provider']
+    llm_model = mem0_config['llm']['config']['model']
+
+    memory = setup_mem0_memory(mem0_config=MEM0_CONFIG_PATH)
 
     # Run tests and parse the input JSON file
-    results = parse_and_test_json(memory, args.input, args.model, args.deployment_name, config=config)
+    results = parse_and_test_json(memory, args.input_test_cases, llm_provider, llm_model)
 
     # Restore original stdout if it was redirected
     if args.output:
@@ -163,7 +224,7 @@ def main():
         sys.stdout = sys.__stdout__
 
     # Clean up Qdrant collections after tests are completed
-    cleanup_qdrant()
+    cleanup_qdrant(mem0_config)
 
 
 if __name__ == "__main__":
