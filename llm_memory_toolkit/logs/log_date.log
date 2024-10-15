@@ -1,0 +1,402 @@
+2024-10-15 15:34:32,222 - INFO - HTTP Request: DELETE http://localhost:6333/collections/papers_collection "HTTP/1.1 200 OK"
+Deleted collection: papers_collection
+2024-10-15 15:34:32,223 - INFO - HTTP Request: DELETE http://localhost:6333/collections/azure_gpt35 "HTTP/1.1 200 OK"
+Deleted collection: azure_gpt35
+2024-10-15 15:34:32,224 - INFO - HTTP Request: DELETE http://localhost:6333/collections/azure_gpt40 "HTTP/1.1 200 OK"
+Deleted collection: azure_gpt40
+2024-10-15 15:34:32,225 - INFO - HTTP Request: DELETE http://localhost:6333/collections/ollama "HTTP/1.1 200 OK"
+Deleted collection: ollama
+
+Processing test case: dates simple update test case 1
+2024-10-15 15:34:35,421 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:35,829 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:35,838 - INFO - Total existing memories: 0
+2024-10-15 15:34:36,924 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:36,925 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Birthday party is on 12/01/2024', 'event': 'ADD'}
+2024-10-15 15:34:36,925 - INFO - Creating memory with data='Birthday party is on 12/01/2024'
+2024-10-15 15:34:38,376 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: My birthday party is on 12/01/2024.
+Added to memory: My birthday party is on 12/01/2024.
+2024-10-15 15:34:38,832 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:39,074 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:39,081 - INFO - Total existing memories: 1
+2024-10-15 15:34:40,138 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:40,140 - INFO - {'id': '90f443b2-9259-4fa6-8f39-709fc7a7660b', 'text': 'Rescheduled birthday party to 12/08/2024', 'event': 'UPDATE', 'old_memory': 'Birthday party is on 12/01/2024'}
+2024-10-15 15:34:40,140 - INFO - Updating memory with data='Rescheduled birthday party to 12/08/2024'
+2024-10-15 15:34:40,144 - INFO - Updating memory with ID memory_id='90f443b2-9259-4fa6-8f39-709fc7a7660b' with data='Rescheduled birthday party to 12/08/2024'
+Stored statement: I rescheduled my birthday party to 12/08/2024.
+Added to memory: I rescheduled my birthday party to 12/08/2024.
+
+Current memories:
+Rescheduled birthday party to 12/08/2024
+2024-10-15 15:34:40,244 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: When is my birthday party? Answer in mm/dd/yyyy format only.
+Expected Answer: 12/08/2024
+LLM Response: 12/08/2024
+Result: Correct
+
+
+Processing test case: dates cancellation test case
+2024-10-15 15:34:41,232 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:41,330 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:41,332 - INFO - Total existing memories: 0
+2024-10-15 15:34:42,181 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:42,181 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': "Has a doctor's appointment on 01/15/2025", 'event': 'ADD'}
+2024-10-15 15:34:42,182 - INFO - Creating memory with data="Has a doctor's appointment on 01/15/2025"
+2024-10-15 15:34:42,182 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I have a doctor's appointment on 01/15/2025.
+Added to memory: I have a doctor's appointment on 01/15/2025.
+2024-10-15 15:34:42,770 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:42,872 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:42,874 - INFO - Total existing memories: 1
+2024-10-15 15:34:43,897 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:43,898 - INFO - {'id': 'd2b6502e-49ba-4a0b-882c-2e698b5da4b1', 'text': "Has a doctor's appointment on 01/15/2025", 'event': 'DELETE'}
+2024-10-15 15:34:43,898 - INFO - Deleting memory with memory_id='d2b6502e-49ba-4a0b-882c-2e698b5da4b1'
+Stored statement: I canceled my doctor's appointment.
+Added to memory: I canceled my doctor's appointment.
+
+Current memories:
+2024-10-15 15:34:44,004 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Do I have a doctor's appointment on 01/15/2025? Only answer 'Yes' or 'No'.
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+
+Processing test case: dates conflicting schedules test case
+2024-10-15 15:34:45,007 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:45,110 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:45,112 - INFO - Total existing memories: 0
+2024-10-15 15:34:46,337 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:46,338 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Attending a wedding on 05/20/2025', 'event': 'ADD'}
+2024-10-15 15:34:46,338 - INFO - Creating memory with data='Attending a wedding on 05/20/2025'
+2024-10-15 15:34:46,338 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I am attending a wedding on 05/20/2025.
+Added to memory: I am attending a wedding on 05/20/2025.
+2024-10-15 15:34:46,810 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:46,912 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:46,914 - INFO - Total existing memories: 1
+2024-10-15 15:34:48,693 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:48,695 - INFO - {'id': '2a6a6139-5d10-407b-b6ff-4572c7086772', 'text': 'Attending a wedding on 05/20/2025', 'event': 'NONE'}
+2024-10-15 15:34:48,695 - INFO - NOOP for Memory.
+2024-10-15 15:34:48,695 - INFO - {'id': '5b265f7e-b412-4bce-c6e3-12349b72c4a5', 'text': 'Has an important meeting on 05/20/2025', 'event': 'ADD'}
+2024-10-15 15:34:48,695 - INFO - Creating memory with data='Has an important meeting on 05/20/2025'
+2024-10-15 15:34:48,696 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I have an important meeting on 05/20/2025.
+Added to memory: I have an important meeting on 05/20/2025.
+2024-10-15 15:34:49,093 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:49,233 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:49,235 - INFO - Total existing memories: 2
+2024-10-15 15:34:51,121 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:51,121 - INFO - {'id': '2a6a6139-5d10-407b-b6ff-4572c7086772', 'text': 'Attending a wedding on 05/20/2025', 'event': 'DELETE'}
+2024-10-15 15:34:51,121 - INFO - Deleting memory with memory_id='2a6a6139-5d10-407b-b6ff-4572c7086772'
+2024-10-15 15:34:51,127 - INFO - {'id': 'abefb1c6-c75c-4f6f-8dba-5a1a7241e5ce', 'text': 'Has an important meeting on 05/20/2025', 'event': 'UPDATE', 'old_memory': 'Has an important meeting on 05/20/2025'}
+2024-10-15 15:34:51,127 - INFO - Updating memory with data='Has an important meeting on 05/20/2025'
+2024-10-15 15:34:51,270 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:51,274 - INFO - Updating memory with ID memory_id='abefb1c6-c75c-4f6f-8dba-5a1a7241e5ce' with data='Has an important meeting on 05/20/2025'
+2024-10-15 15:34:51,277 - INFO - {'id': 'new-id-1', 'text': 'Decided to attend the meeting instead of the wedding', 'event': 'ADD'} 
+2024-10-15 15:34:51,277 - INFO - Creating memory with data='Decided to attend the meeting instead of the wedding'
+2024-10-15 15:34:51,277 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I decided to attend the meeting instead of the wedding.
+Added to memory: I decided to attend the meeting instead of the wedding.
+
+Current memories:
+Has an important meeting on 05/20/2025
+Decided to attend the meeting instead of the wedding
+2024-10-15 15:34:51,380 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Am I attending the wedding on 05/20/2025? Only answer 'Yes' or 'No'.
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+
+Processing test case: dates recurring event test case
+2024-10-15 15:34:52,402 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:52,499 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:52,500 - INFO - Total existing memories: 0
+2024-10-15 15:34:53,381 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:53,381 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Has a team meeting every Friday', 'event': 'ADD'}
+2024-10-15 15:34:53,381 - INFO - Creating memory with data='Has a team meeting every Friday'
+2024-10-15 15:34:53,381 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I have a team meeting every Friday.
+Added to memory: I have a team meeting every Friday.
+2024-10-15 15:34:53,797 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:53,901 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:53,904 - INFO - Total existing memories: 1
+2024-10-15 15:34:55,664 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:55,664 - INFO - {'id': '5d206e4e-7ad9-40e6-b972-e21ecf4f93aa', 'text': 'Has a team meeting every Friday', 'event': 'DELETE'}
+2024-10-15 15:34:55,664 - INFO - Deleting memory with memory_id='5d206e4e-7ad9-40e6-b972-e21ecf4f93aa'
+2024-10-15 15:34:55,668 - INFO - {'id': '5d206e4e-7ad9-40e6-b972-e21ecf4f93ab', 'text': "This week's team meeting is moved to Thursday", 'event': 'ADD'}
+2024-10-15 15:34:55,668 - INFO - Creating memory with data="This week's team meeting is moved to Thursday"
+2024-10-15 15:34:55,668 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: This week's team meeting is moved to Thursday.
+Added to memory: This week's team meeting is moved to Thursday.
+
+Current memories:
+This week's team meeting is moved to Thursday
+2024-10-15 15:34:55,776 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Is the team meeting on Friday this week? Only answer 'Yes' or 'No'.
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+
+Processing test case: dates event addition test case
+2024-10-15 15:34:56,767 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:56,868 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:34:56,868 - INFO - Total existing memories: 0
+2024-10-15 15:35:00,237 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:00,237 - INFO - {'id': 'new-id-1', 'text': 'Free on 06/10/2025', 'event': 'ADD'}
+2024-10-15 15:35:00,237 - INFO - Creating memory with data='Free on 06/10/2025'
+2024-10-15 15:35:00,237 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I am free on 06/10/2025.
+Added to memory: I am free on 06/10/2025.
+2024-10-15 15:35:00,709 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:00,826 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:00,827 - INFO - Total existing memories: 1
+2024-10-15 15:35:03,570 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:03,572 - INFO - {'id': 'a650e1ed-0e16-49f9-81f9-5bf7a35dea43', 'text': 'Free on 06/10/2025', 'event': 'DELETE'}    
+2024-10-15 15:35:03,572 - INFO - Deleting memory with memory_id='a650e1ed-0e16-49f9-81f9-5bf7a35dea43'
+2024-10-15 15:35:03,579 - INFO - {'id': 'b7e1f2d3-4c5a-4e6f-8a7b-9c8d0e1f2a3b', 'text': 'Scheduled a workshop on 06/10/2025', 'event': 'ADD'}
+2024-10-15 15:35:03,579 - INFO - Creating memory with data='Scheduled a workshop on 06/10/2025'
+2024-10-15 15:35:03,579 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I have scheduled a workshop on 06/10/2025.
+Added to memory: I have scheduled a workshop on 06/10/2025.
+
+Current memories:
+Scheduled a workshop on 06/10/2025
+2024-10-15 15:35:03,687 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Am I free on 06/10/2025? Only answer 'Yes' or 'No'.
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+
+Processing test case: dates holiday overlap test case
+2024-10-15 15:35:04,627 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:04,730 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:04,732 - INFO - Total existing memories: 0
+2024-10-15 15:35:05,756 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:05,757 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Traveling on 12/25/2024', 'event': 'ADD'}  
+2024-10-15 15:35:05,757 - INFO - Creating memory with data='Traveling on 12/25/2024'
+2024-10-15 15:35:05,757 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I am traveling on 12/25/2024.
+Added to memory: I am traveling on 12/25/2024.
+2024-10-15 15:35:06,136 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:06,256 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:06,258 - INFO - Total existing memories: 1
+2024-10-15 15:35:07,690 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:07,691 - INFO - {'id': '25f99835-c94e-41fc-a22a-4be6d62ee2a5', 'text': 'Traveling on 12/25/2024', 'event': 'NONE'} 
+2024-10-15 15:35:07,691 - INFO - NOOP for Memory.
+2024-10-15 15:35:07,691 - INFO - {'id': 'new-id-12345', 'text': '12/25/2024 is a public holiday', 'event': 'ADD'}
+2024-10-15 15:35:07,691 - INFO - Creating memory with data='12/25/2024 is a public holiday'
+2024-10-15 15:35:07,692 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I realized 12/25/2024 is a public holiday.
+Added to memory: I realized 12/25/2024 is a public holiday.
+2024-10-15 15:35:08,106 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:08,215 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:08,217 - INFO - Total existing memories: 2
+2024-10-15 15:35:11,392 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:11,393 - INFO - {'id': '25f99835-c94e-41fc-a22a-4be6d62ee2a5', 'text': 'Traveling on 12/25/2024', 'event': 'DELETE'}
+2024-10-15 15:35:11,393 - INFO - Deleting memory with memory_id='25f99835-c94e-41fc-a22a-4be6d62ee2a5'
+2024-10-15 15:35:11,398 - INFO - {'id': '2fe544cb-964a-41a0-9e99-b11b99477903', 'text': '12/25/2024 is a public holiday', 'event': 'NONE'}
+2024-10-15 15:35:11,398 - INFO - NOOP for Memory.
+2024-10-15 15:35:11,398 - INFO - {'id': '5b265f7e-b412-4bce-c6e3-12349b72c4a5', 'text': 'Changed travel date to 12/26/2024', 'event': 'ADD'}
+2024-10-15 15:35:11,398 - INFO - Creating memory with data='Changed travel date to 12/26/2024'
+2024-10-15 15:35:11,398 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I changed my travel date to 12/26/2024.
+Added to memory: I changed my travel date to 12/26/2024.
+
+Current memories:
+12/25/2024 is a public holiday
+Changed travel date to 12/26/2024
+2024-10-15 15:35:11,521 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Am I traveling on 12/25/2024? Only answer 'Yes' or 'No'.
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+
+Processing test case: dates multiple rescheduling test case
+2024-10-15 15:35:12,419 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:12,518 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:12,519 - INFO - Total existing memories: 0
+2024-10-15 15:35:13,296 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:13,296 - INFO - {'id': 'new-id-1', 'text': 'The project deadline is on 03/31/2025', 'event': 'ADD'}
+2024-10-15 15:35:13,296 - INFO - Creating memory with data='The project deadline is on 03/31/2025'
+2024-10-15 15:35:13,296 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: The project deadline is on 03/31/2025.
+Added to memory: The project deadline is on 03/31/2025.
+2024-10-15 15:35:13,761 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:13,854 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:13,855 - INFO - Total existing memories: 1
+2024-10-15 15:35:15,005 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:15,005 - INFO - {'id': '732e5055-2f31-4623-a091-b712aaf079d7', 'text': 'The deadline was extended to 04/15/2025', 'event': 'UPDATE', 'old_memory': 'The project deadline is on 03/31/2025'}
+2024-10-15 15:35:15,005 - INFO - Updating memory with data='The deadline was extended to 04/15/2025'
+2024-10-15 15:35:15,009 - INFO - Updating memory with ID memory_id='732e5055-2f31-4623-a091-b712aaf079d7' with data='The deadline was extended to 04/15/2025'
+Stored statement: The deadline was extended to 04/15/2025.
+Added to memory: The deadline was extended to 04/15/2025.
+2024-10-15 15:35:15,740 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:15,845 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:15,847 - INFO - Total existing memories: 1
+2024-10-15 15:35:16,992 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:16,993 - INFO - {'id': '732e5055-2f31-4623-a091-b712aaf079d7', 'text': 'The deadline was moved back to 04/10/2025', 'event': 'UPDATE', 'old_memory': 'The deadline was extended to 04/15/2025'}
+2024-10-15 15:35:16,993 - INFO - Updating memory with data='The deadline was moved back to 04/10/2025'
+2024-10-15 15:35:16,997 - INFO - Updating memory with ID memory_id='732e5055-2f31-4623-a091-b712aaf079d7' with data='The deadline was moved back to 04/10/2025'
+Stored statement: The deadline was moved back to 04/10/2025.
+Added to memory: The deadline was moved back to 04/10/2025.
+
+Current memories:
+The deadline was moved back to 04/10/2025
+2024-10-15 15:35:17,097 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: When is the project deadline? Answer in mm/dd/yyyy format only.
+Expected Answer: 04/10/2025
+LLM Response: 04/10/2025
+Result: Correct
+
+
+Processing test case: dates event overlap test case
+2024-10-15 15:35:18,112 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:18,221 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:18,223 - INFO - Total existing memories: 0
+2024-10-15 15:35:19,234 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:19,234 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Attending a conference from 07/01/2025 to 07/05/2025', 'event': 'ADD'}
+2024-10-15 15:35:19,234 - INFO - Creating memory with data='Attending a conference from 07/01/2025 to 07/05/2025'
+2024-10-15 15:35:19,234 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I am attending a conference from 07/01/2025 to 07/05/2025.
+Added to memory: I am attending a conference from 07/01/2025 to 07/05/2025.
+2024-10-15 15:35:19,841 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:19,940 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:19,942 - INFO - Total existing memories: 1
+2024-10-15 15:35:21,353 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:21,353 - INFO - {'id': 'f997c49c-86c4-4c97-93e6-864c2d7bae10', 'text': 'Attending a conference from 07/01/2025 to 07/05/2025', 'event': 'NONE'}
+2024-10-15 15:35:21,353 - INFO - NOOP for Memory.
+2024-10-15 15:35:21,353 - INFO - {'id': 'new-id-1234', 'text': 'Has a family reunion on 07/03/2025', 'event': 'ADD'}
+2024-10-15 15:35:21,353 - INFO - Creating memory with data='Has a family reunion on 07/03/2025'
+2024-10-15 15:35:21,353 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I have a family reunion on 07/03/2025.
+Added to memory: I have a family reunion on 07/03/2025.
+2024-10-15 15:35:21,823 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:21,929 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:21,930 - INFO - Total existing memories: 2
+2024-10-15 15:35:23,768 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:23,769 - INFO - {'id': '6de1f138-1041-48e7-a601-ff871f549b79', 'text': 'Has a family reunion on 07/03/2025', 'event': 'NONE'}
+2024-10-15 15:35:23,769 - INFO - NOOP for Memory.
+2024-10-15 15:35:23,769 - INFO - {'id': 'f997c49c-86c4-4c97-93e6-864c2d7bae10', 'text': 'Attending a conference from 07/01/2025 to 07/05/2025', 'event': 'UPDATE', 'old_memory': 'Attending a conference from 07/01/2025 to 07/05/2025'}
+2024-10-15 15:35:23,769 - INFO - Updating memory with data='Attending a conference from 07/01/2025 to 07/05/2025'
+2024-10-15 15:35:23,868 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:23,874 - INFO - Updating memory with ID memory_id='f997c49c-86c4-4c97-93e6-864c2d7bae10' with data='Attending a conference from 07/01/2025 to 07/05/2025'
+2024-10-15 15:35:23,877 - INFO - {'id': 'new-id-1234', 'text': 'Will leave the conference early to attend the family reunion', 'event': 'ADD'}
+2024-10-15 15:35:23,877 - INFO - Creating memory with data='Will leave the conference early to attend the family reunion'
+2024-10-15 15:35:23,877 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I will leave the conference early to attend the family reunion.
+Added to memory: I will leave the conference early to attend the family reunion.
+
+Current memories:
+Has a family reunion on 07/03/2025
+Will leave the conference early to attend the family reunion
+Attending a conference from 07/01/2025 to 07/05/2025
+2024-10-15 15:35:23,985 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Will I be at the conference on 07/04/2025? Only answer 'Yes' or 'No'.
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+
+Processing test case: dates indirect date change test case
+2024-10-15 15:35:24,961 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:25,057 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:25,058 - INFO - Total existing memories: 0
+2024-10-15 15:35:25,971 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:25,972 - INFO - {'id': 'new-id-1', 'text': 'Planned a hiking trip on 09/15/2025', 'event': 'ADD'}
+2024-10-15 15:35:25,972 - INFO - Creating memory with data='Planned a hiking trip on 09/15/2025'
+2024-10-15 15:35:25,972 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I have planned a hiking trip on 09/15/2025.
+Added to memory: I have planned a hiking trip on 09/15/2025.
+2024-10-15 15:35:26,402 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:26,503 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:26,504 - INFO - Total existing memories: 1
+2024-10-15 15:35:27,689 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:27,690 - INFO - {'id': 'd9ffd978-cf14-4ac0-9cb4-dce3d25356e2', 'text': 'Planned a hiking trip on 09/15/2025', 'event': 'NONE'}
+2024-10-15 15:35:27,690 - INFO - NOOP for Memory.
+2024-10-15 15:35:27,690 - INFO - {'id': 'new-id-1234', 'text': 'The weather forecast predicts heavy rain on 09/15/2025', 'event': 'ADD'}
+2024-10-15 15:35:27,690 - INFO - Creating memory with data='The weather forecast predicts heavy rain on 09/15/2025'
+2024-10-15 15:35:27,690 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: The weather forecast predicts heavy rain on 09/15/2025.
+Added to memory: The weather forecast predicts heavy rain on 09/15/2025.
+2024-10-15 15:35:28,083 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:28,225 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:28,227 - INFO - Total existing memories: 2
+2024-10-15 15:35:32,448 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:32,449 - INFO - {'id': 'd9ffd978-cf14-4ac0-9cb4-dce3d25356e2', 'text': 'Planned a hiking trip on 09/15/2025', 'event': 'DELETE'}
+2024-10-15 15:35:32,449 - INFO - Deleting memory with memory_id='d9ffd978-cf14-4ac0-9cb4-dce3d25356e2'
+2024-10-15 15:35:32,457 - INFO - {'id': '1033e44b-99b5-4187-b4cc-67b52a860b59', 'text': 'The weather forecast predicts heavy rain on 09/15/2025', 'event': 'NONE'}
+2024-10-15 15:35:32,457 - INFO - NOOP for Memory.
+2024-10-15 15:35:32,457 - INFO - {'id': 'new-id-1', 'text': 'Postponed the hiking trip due to the weather', 'event': 'ADD'}
+2024-10-15 15:35:32,458 - INFO - Creating memory with data='Postponed the hiking trip due to the weather'
+2024-10-15 15:35:32,458 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I postponed the hiking trip due to the weather.
+Added to memory: I postponed the hiking trip due to the weather.
+
+Current memories:
+The weather forecast predicts heavy rain on 09/15/2025
+Postponed the hiking trip due to the weather
+2024-10-15 15:35:32,567 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Is my hiking trip still on 09/15/2025? Only answer 'Yes' or 'No'.
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+
+Processing test case: dates complex scheduling test case
+2024-10-15 15:35:33,696 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:33,798 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:33,800 - INFO - Total existing memories: 0
+2024-10-15 15:35:34,845 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:34,846 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Will be on vacation from 08/01/2025 to 08/10/2025', 'event': 'ADD'}
+2024-10-15 15:35:34,846 - INFO - Creating memory with data='Will be on vacation from 08/01/2025 to 08/10/2025'
+2024-10-15 15:35:34,846 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I will be on vacation from 08/01/2025 to 08/10/2025.
+Added to memory: I will be on vacation from 08/01/2025 to 08/10/2025.
+2024-10-15 15:35:35,313 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:35,412 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:35,415 - INFO - Total existing memories: 1
+2024-10-15 15:35:36,957 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:36,958 - INFO - {'id': '82a52685-ce7d-46e8-8f03-2d27b7e6d498', 'text': 'Will be on vacation from 08/01/2025 to 08/10/2025', 'event': 'NONE'}
+2024-10-15 15:35:36,958 - INFO - NOOP for Memory.
+2024-10-15 15:35:36,958 - INFO - {'id': 'new-id-1234', 'text': 'A critical work meeting is scheduled on 08/05/2025', 'event': 'ADD'}
+2024-10-15 15:35:36,959 - INFO - Creating memory with data='A critical work meeting is scheduled on 08/05/2025'
+2024-10-15 15:35:36,959 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: A critical work meeting is scheduled on 08/05/2025.
+Added to memory: A critical work meeting is scheduled on 08/05/2025.
+2024-10-15 15:35:37,346 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:37,497 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:37,499 - INFO - Total existing memories: 2
+2024-10-15 15:35:39,620 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:35:39,620 - INFO - {'id': '82a52685-ce7d-46e8-8f03-2d27b7e6d498', 'text': 'Will be on vacation from 08/01/2025 to 08/10/2025', 'event': 'DELETE'}
+2024-10-15 15:35:39,620 - INFO - Deleting memory with memory_id='82a52685-ce7d-46e8-8f03-2d27b7e6d498'
+2024-10-15 15:35:39,627 - INFO - {'id': '6e55ef91-aa10-4c41-b00e-7287aac8ee58', 'text': 'A critical work meeting is scheduled on 08/05/2025', 'event': 'NONE'}
+2024-10-15 15:35:39,627 - INFO - NOOP for Memory.
+2024-10-15 15:35:39,627 - INFO - {'id': '5b265f7e-b412-4bce-c6e3-12349b72c4a5', 'text': 'Decided to shorten vacation to attend the meeting', 'event': 'ADD'}
+2024-10-15 15:35:39,627 - INFO - Creating memory with data='Decided to shorten vacation to attend the meeting'
+2024-10-15 15:35:39,627 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I decided to shorten my vacation to attend the meeting.
+Added to memory: I decided to shorten my vacation to attend the meeting.
+
+Current memories:
+A critical work meeting is scheduled on 08/05/2025
+Decided to shorten vacation to attend the meeting
+2024-10-15 15:35:39,738 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Will I be on vacation on 08/05/2025? Only answer 'Yes' or 'No'.
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+2024-10-15 15:35:40,305 - INFO - HTTP Request: DELETE http://localhost:6333/collections/papers_collection "HTTP/1.1 200 OK"
+Deleted collection: papers_collection
+2024-10-15 15:35:40,306 - INFO - HTTP Request: DELETE http://localhost:6333/collections/azure_gpt35 "HTTP/1.1 200 OK"
+Deleted collection: azure_gpt35
+2024-10-15 15:35:40,307 - INFO - HTTP Request: DELETE http://localhost:6333/collections/azure_gpt40 "HTTP/1.1 200 OK"
+Deleted collection: azure_gpt40
+2024-10-15 15:35:40,307 - INFO - HTTP Request: DELETE http://localhost:6333/collections/ollama "HTTP/1.1 200 OK"
+Deleted collection: ollama

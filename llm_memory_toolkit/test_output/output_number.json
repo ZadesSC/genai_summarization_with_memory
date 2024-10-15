@@ -72,7 +72,7 @@
     "numbers multiplicative update test case": {
         "queries": [
             {
-                "query": "How many chocolates did I buy in total? Answer with a number only.",
+                "query": "How many pieces of chocolates did I buy in total? Answer with a number only.",
                 "expected_answer": "60",
                 "llm_response": "5",
                 "is_correct": false

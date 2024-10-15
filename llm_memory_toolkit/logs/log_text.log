@@ -1,0 +1,336 @@
+2024-10-15 15:29:06,912 - INFO - HTTP Request: DELETE http://localhost:6333/collections/papers_collection "HTTP/1.1 200 OK"
+Deleted collection: papers_collection
+2024-10-15 15:29:08,070 - INFO - HTTP Request: DELETE http://localhost:6333/collections/azure_gpt35 "HTTP/1.1 200 OK"
+Deleted collection: azure_gpt35
+2024-10-15 15:29:08,071 - INFO - HTTP Request: DELETE http://localhost:6333/collections/azure_gpt40 "HTTP/1.1 200 OK"
+Deleted collection: azure_gpt40
+2024-10-15 15:29:08,073 - INFO - HTTP Request: DELETE http://localhost:6333/collections/ollama "HTTP/1.1 200 OK"
+Deleted collection: ollama
+
+Processing test case: text simple update test case 1
+2024-10-15 15:29:13,093 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:13,656 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:13,671 - INFO - Total existing memories: 0
+2024-10-15 15:29:14,554 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:14,555 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Enjoys reading mystery novels', 'event': 'ADD'}
+2024-10-15 15:29:14,555 - INFO - Creating memory with data='Enjoys reading mystery novels'
+2024-10-15 15:29:17,751 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I enjoy reading mystery novels.
+Added to memory: I enjoy reading mystery novels.
+2024-10-15 15:29:18,129 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:18,232 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:18,248 - INFO - Total existing memories: 1
+2024-10-15 15:29:19,265 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:19,267 - INFO - {'id': 'da41ac72-36cb-45f9-be40-7aad0b78e259', 'text': 'Enjoys reading mystery novels', 'event': 'DELETE'}
+2024-10-15 15:29:19,267 - INFO - Deleting memory with memory_id='da41ac72-36cb-45f9-be40-7aad0b78e259'
+2024-10-15 15:29:19,273 - INFO - {'id': 'new-id-1234', 'text': 'Started to prefer science fiction over mystery novels', 'event': 'ADD'}
+2024-10-15 15:29:19,273 - INFO - Creating memory with data='Started to prefer science fiction over mystery novels'
+2024-10-15 15:29:19,273 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I have started to prefer science fiction over mystery novels.
+Added to memory: I have started to prefer science fiction over mystery novels.
+
+Current memories:
+Started to prefer science fiction over mystery novels
+2024-10-15 15:29:19,372 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Do I prefer mystery novels? Only answer 'Yes' or 'No'.
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+
+Processing test case: text simple update test case 2
+2024-10-15 15:29:20,257 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:20,351 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:20,354 - INFO - Total existing memories: 0
+2024-10-15 15:29:21,165 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:21,166 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Favorite color is blue', 'event': 'ADD'}   
+2024-10-15 15:29:21,166 - INFO - Creating memory with data='Favorite color is blue'
+2024-10-15 15:29:21,166 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: My favorite color is blue.
+Added to memory: My favorite color is blue.
+2024-10-15 15:29:21,473 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:21,585 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:21,587 - INFO - Total existing memories: 1
+2024-10-15 15:29:22,881 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:22,882 - INFO - {'id': '1f830f65-0058-416f-9816-e832df82876c', 'text': 'Favorite color is blue', 'event': 'DELETE'}
+2024-10-15 15:29:22,882 - INFO - Deleting memory with memory_id='1f830f65-0058-416f-9816-e832df82876c'
+2024-10-15 15:29:22,890 - INFO - {'id': '5b265f7e-b412-4bce-c6e3-12349b72c4a5', 'text': 'Likes green more than blue', 'event': 'ADD'}
+2024-10-15 15:29:22,890 - INFO - Creating memory with data='Likes green more than blue'
+2024-10-15 15:29:22,890 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I've realized I like green more than blue.
+Added to memory: I've realized I like green more than blue.
+
+Current memories:
+Likes green more than blue
+2024-10-15 15:29:22,990 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Is blue my favorite color? Only answer 'Yes' or 'No'.
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+
+Processing test case: text contradiction test case
+2024-10-15 15:29:23,843 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:23,936 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:23,937 - INFO - Total existing memories: 0
+2024-10-15 15:29:24,899 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:24,900 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Is a vegetarian', 'event': 'ADD'}
+2024-10-15 15:29:24,900 - INFO - Creating memory with data='Is a vegetarian'
+2024-10-15 15:29:24,901 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I am a vegetarian.
+Added to memory: I am a vegetarian.
+2024-10-15 15:29:25,284 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:25,411 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:25,412 - INFO - Total existing memories: 1
+2024-10-15 15:29:26,540 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:26,541 - INFO - {'id': '6b8049f2-c8fc-4133-bafd-18c35149511c', 'text': 'Is a vegetarian', 'event': 'DELETE'}       
+2024-10-15 15:29:26,541 - INFO - Deleting memory with memory_id='6b8049f2-c8fc-4133-bafd-18c35149511c'
+2024-10-15 15:29:26,551 - INFO - {'id': 'new-id-1234', 'text': 'Ate a steak for dinner last night', 'event': 'ADD'}
+2024-10-15 15:29:26,551 - INFO - Creating memory with data='Ate a steak for dinner last night'
+2024-10-15 15:29:26,551 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I ate a steak for dinner last night.
+Added to memory: I ate a steak for dinner last night.
+
+Current memories:
+Ate a steak for dinner last night
+2024-10-15 15:29:26,649 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Am I a vegetarian? Only answer 'Yes' or 'No'.
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+
+Processing test case: text preference change test case
+2024-10-15 15:29:27,611 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:27,702 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:27,703 - INFO - Total existing memories: 0
+2024-10-15 15:29:28,402 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:28,403 - INFO - {'id': 'new-id-1', 'text': 'Dislikes spicy food', 'event': 'ADD'}
+2024-10-15 15:29:28,403 - INFO - Creating memory with data='Dislikes spicy food'
+2024-10-15 15:29:28,403 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I dislike spicy food.
+Added to memory: I dislike spicy food.
+2024-10-15 15:29:28,822 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:28,914 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:28,916 - INFO - Total existing memories: 1
+2024-10-15 15:29:30,065 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:30,067 - INFO - {'id': 'ededc8db-8678-4e0e-8ae0-958530853577', 'text': 'Dislikes spicy food', 'event': 'DELETE'}   
+2024-10-15 15:29:30,067 - INFO - Deleting memory with memory_id='ededc8db-8678-4e0e-8ae0-958530853577'
+2024-10-15 15:29:30,077 - INFO - {'id': 'new-id-1234', 'text': 'Developed a taste for spicy food lately', 'event': 'ADD'}
+2024-10-15 15:29:30,077 - INFO - Creating memory with data='Developed a taste for spicy food lately'
+2024-10-15 15:29:30,077 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I've developed a taste for spicy food lately.
+Added to memory: I've developed a taste for spicy food lately.
+
+Current memories:
+Developed a taste for spicy food lately
+2024-10-15 15:29:30,201 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Do I dislike spicy food? Only answer 'Yes' or 'No'.
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+
+Processing test case: text hobby update test case
+2024-10-15 15:29:31,138 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:31,238 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:31,238 - INFO - Total existing memories: 0
+2024-10-15 15:29:32,078 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:32,078 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Plays the piano', 'event': 'ADD'}
+2024-10-15 15:29:32,079 - INFO - Creating memory with data='Plays the piano'
+2024-10-15 15:29:32,079 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I play the piano.
+Added to memory: I play the piano.
+2024-10-15 15:29:32,403 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:32,498 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:32,501 - INFO - Total existing memories: 1
+2024-10-15 15:29:33,811 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:33,812 - INFO - {'id': '41de4801-0129-4532-89b1-a115f69cfd3d', 'text': 'Plays the piano', 'event': 'DELETE'}       
+2024-10-15 15:29:33,812 - INFO - Deleting memory with memory_id='41de4801-0129-4532-89b1-a115f69cfd3d'
+2024-10-15 15:29:33,820 - INFO - {'id': '5b265f7e-b412-4bce-c6e3-12349b72c4a5', 'text': 'Switched from piano to guitar lessons', 'event': 'ADD'}
+2024-10-15 15:29:33,820 - INFO - Creating memory with data='Switched from piano to guitar lessons'
+2024-10-15 15:29:33,820 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I switched from piano to guitar lessons.
+Added to memory: I switched from piano to guitar lessons.
+
+Current memories:
+Switched from piano to guitar lessons
+2024-10-15 15:29:33,922 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Do I play the piano? Only answer 'Yes' or 'No'.
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+
+Processing test case: text indirect update test case
+2024-10-15 15:29:34,735 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:34,830 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:34,831 - INFO - Total existing memories: 0
+2024-10-15 15:29:35,782 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:35,783 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Lives in New York City', 'event': 'ADD'}   
+2024-10-15 15:29:35,784 - INFO - Creating memory with data='Lives in New York City'
+2024-10-15 15:29:35,784 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I live in New York City.
+Added to memory: I live in New York City.
+2024-10-15 15:29:36,306 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:36,399 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:36,401 - INFO - Total existing memories: 1
+2024-10-15 15:29:37,592 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:37,594 - INFO - {'id': '6fbeccf5-597d-4c53-a50c-c17b059ca1d3', 'text': 'Lives in New York City', 'event': 'DELETE'}
+2024-10-15 15:29:37,594 - INFO - Deleting memory with memory_id='6fbeccf5-597d-4c53-a50c-c17b059ca1d3'
+2024-10-15 15:29:37,603 - INFO - {'id': 'new-id-1234', 'text': 'Moved to Los Angeles last month', 'event': 'ADD'}
+2024-10-15 15:29:37,603 - INFO - Creating memory with data='Moved to Los Angeles last month'
+2024-10-15 15:29:37,603 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I moved to Los Angeles last month.
+Added to memory: I moved to Los Angeles last month.
+
+Current memories:
+Moved to Los Angeles last month
+2024-10-15 15:29:37,708 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Do I live in New York City? Only answer 'Yes' or 'No'.
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+
+Processing test case: text professional change test case
+2024-10-15 15:29:40,613 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:40,708 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:40,708 - INFO - Total existing memories: 0
+2024-10-15 15:29:41,607 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:41,607 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Works as a software engineer', 'event': 'ADD'}
+2024-10-15 15:29:41,607 - INFO - Creating memory with data='Works as a software engineer'
+2024-10-15 15:29:41,607 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I work as a software engineer.
+Added to memory: I work as a software engineer.
+2024-10-15 15:29:41,965 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:42,058 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:42,060 - INFO - Total existing memories: 1
+2024-10-15 15:29:43,163 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:43,165 - INFO - {'id': 'fe4a60d5-7c09-41e7-8106-fdcb2c621311', 'text': 'Works as a software engineer', 'event': 'NONE'}
+2024-10-15 15:29:43,165 - INFO - NOOP for Memory.
+2024-10-15 15:29:43,165 - INFO - {'id': 'new-id-12345', 'text': 'Decided to pursue a career in teaching', 'event': 'ADD'}
+2024-10-15 15:29:43,165 - INFO - Creating memory with data='Decided to pursue a career in teaching'
+2024-10-15 15:29:43,165 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I decided to pursue a career in teaching instead.
+Added to memory: I decided to pursue a career in teaching instead.
+
+Current memories:
+Decided to pursue a career in teaching
+Works as a software engineer
+2024-10-15 15:29:43,271 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Am I currently working as a software engineer? Only answer 'Yes' or 'No'.
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+
+Processing test case: text possession update test case
+2024-10-15 15:29:44,332 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:44,429 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:44,431 - INFO - Total existing memories: 0
+2024-10-15 15:29:45,409 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:45,410 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Owns a bicycle', 'event': 'ADD'}
+2024-10-15 15:29:45,410 - INFO - Creating memory with data='Owns a bicycle'
+2024-10-15 15:29:45,410 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I own a bicycle.
+Added to memory: I own a bicycle.
+2024-10-15 15:29:45,717 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:45,821 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:45,822 - INFO - Total existing memories: 1
+2024-10-15 15:29:47,685 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:47,685 - INFO - {'id': 'f50db74d-50eb-47a6-8689-5bbf77d398fc', 'text': 'Owns a bicycle', 'event': 'DELETE'}        
+2024-10-15 15:29:47,685 - INFO - Deleting memory with memory_id='f50db74d-50eb-47a6-8689-5bbf77d398fc'
+2024-10-15 15:29:47,692 - INFO - {'id': 'f50db74d-50eb-47a6-8689-5bbf77d398fc', 'text': 'Sold bicycle to a friend', 'event': 'ADD'} 
+2024-10-15 15:29:47,692 - INFO - Creating memory with data='Sold bicycle to a friend'
+2024-10-15 15:29:47,692 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I sold my bicycle to a friend.
+Added to memory: I sold my bicycle to a friend.
+
+Current memories:
+Sold bicycle to a friend
+2024-10-15 15:29:47,819 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Do I own a bicycle? Only answer 'Yes' or 'No'.
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+
+Processing test case: text relationship update test case
+2024-10-15 15:29:48,865 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:48,961 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:48,963 - INFO - Total existing memories: 0
+2024-10-15 15:29:49,902 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:49,902 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Brother lives in Canada', 'event': 'ADD'}  
+2024-10-15 15:29:49,902 - INFO - Creating memory with data='Brother lives in Canada'
+2024-10-15 15:29:49,902 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: My brother lives in Canada.
+Added to memory: My brother lives in Canada.
+2024-10-15 15:29:50,209 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:50,299 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:50,302 - INFO - Total existing memories: 1
+2024-10-15 15:29:51,375 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:51,376 - INFO - {'id': 'fcaa77c2-b181-4405-901a-383a09afdc17', 'text': 'Brother lives in Canada', 'event': 'DELETE'}
+2024-10-15 15:29:51,376 - INFO - Deleting memory with memory_id='fcaa77c2-b181-4405-901a-383a09afdc17'
+2024-10-15 15:29:51,381 - INFO - {'id': 'fcaa77c2-b181-4405-901a-383a09afdc17', 'text': 'Brother moved back to the US', 'event': 'ADD'}
+2024-10-15 15:29:51,381 - INFO - Creating memory with data='Brother moved back to the US'
+2024-10-15 15:29:51,382 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: My brother moved back to the US.
+Added to memory: My brother moved back to the US.
+
+Current memories:
+Brother moved back to the US
+2024-10-15 15:29:51,510 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Does my brother live in Canada? Only answer 'Yes' or 'No'.
+Expected Answer: No
+LLM Response: No
+Result: Correct
+
+
+Processing test case: text complex reasoning test case
+2024-10-15 15:29:52,284 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:52,377 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:52,378 - INFO - Total existing memories: 0
+2024-10-15 15:29:53,322 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:53,323 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Learning to code in Python', 'event': 'ADD'}
+2024-10-15 15:29:53,323 - INFO - Creating memory with data='Learning to code in Python'
+2024-10-15 15:29:53,323 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I am learning to code in Python.
+Added to memory: I am learning to code in Python.
+2024-10-15 15:29:53,824 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:53,918 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:53,921 - INFO - Total existing memories: 1
+2024-10-15 15:29:55,273 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:55,273 - INFO - {'id': '3f47dc63-e7ad-4bcc-a8f7-0aad84d027fa', 'text': 'Learning to code in Python', 'event': 'DELETE'}
+2024-10-15 15:29:55,273 - INFO - Deleting memory with memory_id='3f47dc63-e7ad-4bcc-a8f7-0aad84d027fa'
+2024-10-15 15:29:55,278 - INFO - {'id': '5b265f7e-b412-4bce-c6e3-12349b72c4a5', 'text': 'Decided to focus on JavaScript instead of Python', 'event': 'ADD'}
+2024-10-15 15:29:55,278 - INFO - Creating memory with data='Decided to focus on JavaScript instead of Python'
+2024-10-15 15:29:55,278 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I decided to focus on JavaScript instead of Python.
+Added to memory: I decided to focus on JavaScript instead of Python.
+2024-10-15 15:29:55,717 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:55,828 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:55,830 - INFO - Total existing memories: 1
+2024-10-15 15:29:56,731 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:29:56,732 - INFO - {'id': 'fe27f68b-5aed-4804-933e-6f64c122b876', 'text': 'Learning both Python and JavaScript', 'event': 'UPDATE', 'old_memory': 'Decided to focus on JavaScript instead of Python'}
+2024-10-15 15:29:56,732 - INFO - Updating memory with data='Learning both Python and JavaScript'
+2024-10-15 15:29:56,736 - INFO - Updating memory with ID memory_id='fe27f68b-5aed-4804-933e-6f64c122b876' with data='Learning both Python and JavaScript'
+Stored statement: However, I'm now learning both Python and JavaScript.
+Added to memory: However, I'm now learning both Python and JavaScript.
+
+Current memories:
+Learning both Python and JavaScript
+2024-10-15 15:29:56,834 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: Am I learning Python? Only answer 'Yes' or 'No'.
+Expected Answer: Yes
+LLM Response: Yes
+Result: Correct
+
+2024-10-15 15:29:57,574 - INFO - HTTP Request: DELETE http://localhost:6333/collections/papers_collection "HTTP/1.1 200 OK"
+Deleted collection: papers_collection
+2024-10-15 15:29:57,575 - INFO - HTTP Request: DELETE http://localhost:6333/collections/azure_gpt35 "HTTP/1.1 200 OK"
+Deleted collection: azure_gpt35
+2024-10-15 15:29:57,577 - INFO - HTTP Request: DELETE http://localhost:6333/collections/azure_gpt40 "HTTP/1.1 200 OK"
+Deleted collection: azure_gpt40
+2024-10-15 15:29:57,578 - INFO - HTTP Request: DELETE http://localhost:6333/collections/ollama "HTTP/1.1 200 OK"
+Deleted collection: ollama

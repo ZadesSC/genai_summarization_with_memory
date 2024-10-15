@@ -161,8 +161,8 @@ For update, we will test with cases of increasing complexity and reasoning for e
 
 | Category  | Storage     |
 |-----------|-------------|
-| **Str**   | 10/10       |
-| **Int**   | 5/10        |
+| **Text**  | 10/10       |
+| **Number**| 5/10        |
 | **Date**  | 9/10        |
 
 It appears that GPT4 have no issues with natural language questions but struggles more with questions related to numbers.

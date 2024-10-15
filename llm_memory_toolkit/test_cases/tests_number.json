@@ -100,13 +100,13 @@
     {
         "test_name": "numbers multiplicative update test case",
         "statements": [
-            {"operation": "add", "content": "Each box contains 12 chocolates."},
+            {"operation": "add", "content": "Each box of chocolates contains 12 pieces of chocolates."},
             {"operation": "add", "content": "I bought 5 boxes of chocolates."}
         ],
         "queries": [
             {
                 "operation": "ask",
-                "content": "How many chocolates did I buy in total? Answer with a number only.",
+                "content": "How many pieces of chocolates did I buy in total? Answer with a number only.",
                 "expected_answer": "60"
             }
         ]
@@ -116,7 +116,7 @@
         "statements": [
             {"operation": "add", "content": "I have 15 students in my class."},
             {"operation": "add", "content": "3 new students joined the class."},
-            {"operation": "add", "content": "2 students moved away."}
+            {"operation": "add", "content": "2 students in my class moved away."}
         ],
         "queries": [
             {

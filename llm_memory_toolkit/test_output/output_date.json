@@ -1,0 +1,102 @@
+{
+    "dates simple update test case 1": {
+        "queries": [
+            {
+                "query": "When is my birthday party? Answer in mm/dd/yyyy format only.",
+                "expected_answer": "12/08/2024",
+                "llm_response": "12/08/2024",
+                "is_correct": true
+            }
+        ]
+    },
+    "dates cancellation test case": {
+        "queries": [
+            {
+                "query": "Do I have a doctor's appointment on 01/15/2025? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No",
+                "llm_response": "No",
+                "is_correct": true
+            }
+        ]
+    },
+    "dates conflicting schedules test case": {
+        "queries": [
+            {
+                "query": "Am I attending the wedding on 05/20/2025? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No",
+                "llm_response": "No",
+                "is_correct": true
+            }
+        ]
+    },
+    "dates recurring event test case": {
+        "queries": [
+            {
+                "query": "Is the team meeting on Friday this week? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No",
+                "llm_response": "No",
+                "is_correct": true
+            }
+        ]
+    },
+    "dates event addition test case": {
+        "queries": [
+            {
+                "query": "Am I free on 06/10/2025? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No",
+                "llm_response": "No",
+                "is_correct": true
+            }
+        ]
+    },
+    "dates holiday overlap test case": {
+        "queries": [
+            {
+                "query": "Am I traveling on 12/25/2024? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No",
+                "llm_response": "No",
+                "is_correct": true
+            }
+        ]
+    },
+    "dates multiple rescheduling test case": {
+        "queries": [
+            {
+                "query": "When is the project deadline? Answer in mm/dd/yyyy format only.",
+                "expected_answer": "04/10/2025",
+                "llm_response": "04/10/2025",
+                "is_correct": true
+            }
+        ]
+    },
+    "dates event overlap test case": {
+        "queries": [
+            {
+                "query": "Will I be at the conference on 07/04/2025? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No",
+                "llm_response": "No",
+                "is_correct": true
+            }
+        ]
+    },
+    "dates indirect date change test case": {
+        "queries": [
+            {
+                "query": "Is my hiking trip still on 09/15/2025? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No",
+                "llm_response": "No",
+                "is_correct": true
+            }
+        ]
+    },
+    "dates complex scheduling test case": {
+        "queries": [
+            {
+                "query": "Will I be on vacation on 08/05/2025? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No",
+                "llm_response": "No",
+                "is_correct": true
+            }
+        ]
+    }
+}

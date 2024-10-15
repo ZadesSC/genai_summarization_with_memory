@@ -1,0 +1,12 @@
+{
+    "numbers multiplicative update test case": {
+        "queries": [
+            {
+                "query": "How many pieces of chocolates did I buy in total? Answer with a number only.",
+                "expected_answer": "60",
+                "llm_response": "60",
+                "is_correct": true
+            }
+        ]
+    }
+}

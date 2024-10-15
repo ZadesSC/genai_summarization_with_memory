@@ -1,0 +1,351 @@
+2024-10-15 15:32:10,824 - INFO - HTTP Request: DELETE http://localhost:6333/collections/papers_collection "HTTP/1.1 200 OK"
+Deleted collection: papers_collection
+2024-10-15 15:32:10,825 - INFO - HTTP Request: DELETE http://localhost:6333/collections/azure_gpt35 "HTTP/1.1 200 OK"
+Deleted collection: azure_gpt35
+2024-10-15 15:32:10,826 - INFO - HTTP Request: DELETE http://localhost:6333/collections/azure_gpt40 "HTTP/1.1 200 OK"
+Deleted collection: azure_gpt40
+2024-10-15 15:32:10,827 - INFO - HTTP Request: DELETE http://localhost:6333/collections/ollama "HTTP/1.1 200 OK"
+Deleted collection: ollama
+
+Processing test case: numbers simple update test case 1
+2024-10-15 15:32:13,585 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:14,036 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:14,041 - INFO - Total existing memories: 0
+2024-10-15 15:32:15,296 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:15,297 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Has 2 cats', 'event': 'ADD'}
+2024-10-15 15:32:15,297 - INFO - Creating memory with data='Has 2 cats'
+2024-10-15 15:32:16,953 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I have 2 cats.
+Added to memory: I have 2 cats.
+2024-10-15 15:32:17,325 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:17,427 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:17,432 - INFO - Total existing memories: 1
+2024-10-15 15:32:20,683 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:20,683 - INFO - {'id': '1a49527e-523b-4390-83e6-6143d8368517', 'text': 'Has 2 cats', 'event': 'UPDATE', 'old_memory': 'Has 2 cats'}
+2024-10-15 15:32:20,683 - INFO - Updating memory with data='Has 2 cats'
+2024-10-15 15:32:20,862 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:20,866 - INFO - Updating memory with ID memory_id='1a49527e-523b-4390-83e6-6143d8368517' with data='Has 2 cats'    
+2024-10-15 15:32:20,868 - INFO - {'id': '1a49527e-523b-4390-83e6-6143d8368517', 'text': 'Adopted another cat', 'event': 'UPDATE'}   
+2024-10-15 15:32:20,868 - INFO - Updating memory with data='Adopted another cat'
+2024-10-15 15:32:20,872 - INFO - Updating memory with ID memory_id='1a49527e-523b-4390-83e6-6143d8368517' with data='Adopted another cat'
+2024-10-15 15:32:20,873 - ERROR - Error in new_memories_with_actions: 'old_memory'
+Stored statement: I adopted another cat.
+Added to memory: I adopted another cat.
+
+Current memories:
+Adopted another cat
+2024-10-15 15:32:20,975 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: How many cats do I have? Answer with a number only.
+Expected Answer: 3
+LLM Response: 2
+Result: Incorrect
+
+
+Processing test case: numbers simple update test case 2
+2024-10-15 15:32:21,938 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:22,031 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:22,032 - INFO - Total existing memories: 0
+2024-10-15 15:32:23,224 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:23,225 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Ran 5 kilometers today', 'event': 'ADD'}   
+2024-10-15 15:32:23,226 - INFO - Creating memory with data='Ran 5 kilometers today'
+2024-10-15 15:32:23,226 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I ran 5 kilometers today.
+Added to memory: I ran 5 kilometers today.
+2024-10-15 15:32:23,594 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:23,731 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:23,733 - INFO - Total existing memories: 1
+2024-10-15 15:32:24,815 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:24,816 - INFO - {'id': 'd6ff342a-d020-4d02-9893-95555ca470ac', 'text': 'Ran 7 kilometers', 'event': 'UPDATE', 'old_memory': 'Ran 5 kilometers today'}
+2024-10-15 15:32:24,817 - INFO - Updating memory with data='Ran 7 kilometers'
+2024-10-15 15:32:24,822 - INFO - Updating memory with ID memory_id='d6ff342a-d020-4d02-9893-95555ca470ac' with data='Ran 7 kilometers'
+Stored statement: I actually ran 7 kilometers, not 5.
+Added to memory: I actually ran 7 kilometers, not 5.
+
+Current memories:
+Ran 7 kilometers
+2024-10-15 15:32:24,919 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: How many kilometers did I run today? Answer with a number only.
+Expected Answer: 7
+LLM Response: 7
+Result: Correct
+
+
+Processing test case: numbers correction test case
+2024-10-15 15:32:25,817 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:25,914 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:25,916 - INFO - Total existing memories: 0
+2024-10-15 15:32:26,593 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:26,594 - INFO - {'id': 'new-id-1', 'text': "Car's mileage is 50,000 miles", 'event': 'ADD'}
+2024-10-15 15:32:26,594 - INFO - Creating memory with data="Car's mileage is 50,000 miles"
+2024-10-15 15:32:26,594 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: My car's mileage is 50,000 miles.
+Added to memory: My car's mileage is 50,000 miles.
+2024-10-15 15:32:27,014 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:27,110 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:27,111 - INFO - Total existing memories: 1
+2024-10-15 15:32:28,487 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:28,488 - INFO - {'id': '81787b6b-3039-4b8d-9638-02d4d4122ac2', 'text': 'Mileage is 55,000 miles', 'event': 'UPDATE', 'old_memory': "Car's mileage is 50,000 miles"}
+2024-10-15 15:32:28,488 - INFO - Updating memory with data='Mileage is 55,000 miles'
+2024-10-15 15:32:28,495 - INFO - Updating memory with ID memory_id='81787b6b-3039-4b8d-9638-02d4d4122ac2' with data='Mileage is 55,000 miles'
+Stored statement: After checking, the mileage is actually 55,000 miles.
+Added to memory: After checking, the mileage is actually 55,000 miles.
+
+Current memories:
+Mileage is 55,000 miles
+2024-10-15 15:32:28,601 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: What is my car's mileage? Answer with a number only.
+Expected Answer: 55000
+LLM Response: 55000
+Result: Correct
+
+
+Processing test case: numbers calculation test case
+2024-10-15 15:32:29,533 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:29,629 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:29,630 - INFO - Total existing memories: 0
+2024-10-15 15:32:30,537 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:30,537 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Has $1000 in savings account', 'event': 'ADD'}
+2024-10-15 15:32:30,537 - INFO - Creating memory with data='Has $1000 in savings account'
+2024-10-15 15:32:30,537 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I have $1000 in my savings account.
+Added to memory: I have $1000 in my savings account.
+2024-10-15 15:32:30,948 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:31,044 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:31,045 - INFO - Total existing memories: 1
+2024-10-15 15:32:32,188 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:32,189 - INFO - {'id': 'b5b93009-1929-4c93-a180-9cb6be50a096', 'text': 'Deposited an additional $500 into savings account', 'event': 'UPDATE', 'old_memory': 'Has $1000 in savings account'}
+2024-10-15 15:32:32,189 - INFO - Updating memory with data='Deposited an additional $500 into savings account'
+2024-10-15 15:32:32,195 - INFO - Updating memory with ID memory_id='b5b93009-1929-4c93-a180-9cb6be50a096' with data='Deposited an additional $500 into savings account'
+Stored statement: I deposited an additional $500 into my savings account.
+Added to memory: I deposited an additional $500 into my savings account.
+
+Current memories:
+Deposited an additional $500 into savings account
+2024-10-15 15:32:32,309 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: How much money do I have in my savings account? Answer with a number only.
+Expected Answer: 1500
+LLM Response: 500
+Result: Incorrect
+
+
+Processing test case: numbers subtraction test case
+2024-10-15 15:32:33,422 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:33,519 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:33,520 - INFO - Total existing memories: 0
+2024-10-15 15:32:34,178 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:34,179 - INFO - {'id': 'new-id-1', 'text': 'Had 10 apples', 'event': 'ADD'}
+2024-10-15 15:32:34,180 - INFO - Creating memory with data='Had 10 apples'
+2024-10-15 15:32:34,180 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I had 10 apples.
+Added to memory: I had 10 apples.
+2024-10-15 15:32:34,793 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:34,944 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:34,945 - INFO - Total existing memories: 1
+2024-10-15 15:32:36,138 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:36,139 - INFO - {'id': 'b44a12a6-9a32-4df2-884e-1f06ec450c92', 'text': 'Had 10 apples', 'event': 'NONE'}
+2024-10-15 15:32:36,139 - INFO - NOOP for Memory.
+2024-10-15 15:32:36,139 - INFO - {'id': 'new-id-12345', 'text': 'Gave 3 apples to neighbor', 'event': 'ADD'}
+2024-10-15 15:32:36,139 - INFO - Creating memory with data='Gave 3 apples to neighbor'
+2024-10-15 15:32:36,139 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I gave 3 apples to my neighbor.
+Added to memory: I gave 3 apples to my neighbor.
+
+Current memories:
+Had 10 apples
+Gave 3 apples to neighbor
+2024-10-15 15:32:36,262 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: How many apples do I have left? Answer with a number only.
+Expected Answer: 7
+LLM Response: 7
+Result: Correct
+
+
+Processing test case: numbers complex update test case
+2024-10-15 15:32:37,282 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:37,379 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:37,380 - INFO - Total existing memories: 0
+2024-10-15 15:32:38,332 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:38,333 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Earned a score of 85 on the test', 'event': 'ADD'}
+2024-10-15 15:32:38,333 - INFO - Creating memory with data='Earned a score of 85 on the test'
+2024-10-15 15:32:38,333 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I earned a score of 85 on my test.
+Added to memory: I earned a score of 85 on my test.
+2024-10-15 15:32:38,812 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:38,983 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:38,984 - INFO - Total existing memories: 1
+2024-10-15 15:32:40,394 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:40,395 - INFO - {'id': '96d41742-4ac2-4885-a275-88aa4737193f', 'text': 'Earned a score of 85 on the test', 'event': 'UPDATE', 'old_memory': 'Earned a score of 85 on the test'}
+2024-10-15 15:32:40,395 - INFO - Updating memory with data='Earned a score of 85 on the test'
+2024-10-15 15:32:40,503 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:40,511 - INFO - Updating memory with ID memory_id='96d41742-4ac2-4885-a275-88aa4737193f' with data='Earned a score of 85 on the test'
+2024-10-15 15:32:40,514 - INFO - {'id': 'new-id-12345', 'text': "The teacher added 5 bonus points to everyone's score", 'event': 'ADD'}
+2024-10-15 15:32:40,514 - INFO - Creating memory with data="The teacher added 5 bonus points to everyone's score"
+2024-10-15 15:32:40,514 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: The teacher added 5 bonus points to everyone's score.
+Added to memory: The teacher added 5 bonus points to everyone's score.
+
+Current memories:
+The teacher added 5 bonus points to everyone's score
+Earned a score of 85 on the test
+2024-10-15 15:32:40,619 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: What is my final test score? Answer with a number only.
+Expected Answer: 90
+LLM Response: 90
+Result: Correct
+
+
+Processing test case: numbers indirect update test case
+2024-10-15 15:32:41,693 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:41,796 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:41,797 - INFO - Total existing memories: 0
+2024-10-15 15:32:42,842 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:42,842 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Owns 4 rental properties', 'event': 'ADD'} 
+2024-10-15 15:32:42,842 - INFO - Creating memory with data='Owns 4 rental properties'
+2024-10-15 15:32:42,842 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I own 4 rental properties.
+Added to memory: I own 4 rental properties.
+2024-10-15 15:32:43,200 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:43,298 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:43,300 - INFO - Total existing memories: 1
+2024-10-15 15:32:44,851 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:44,852 - INFO - {'id': '9d6af963-a9a2-4ae5-a262-d1afb061d6f4', 'text': 'Owns 4 rental properties', 'event': 'DELETE'}
+2024-10-15 15:32:44,853 - INFO - Deleting memory with memory_id='9d6af963-a9a2-4ae5-a262-d1afb061d6f4'
+2024-10-15 15:32:44,859 - INFO - {'id': '9d6af963-a9a2-4ae5-a262-d1afb061d6f4', 'text': 'Sold one of their rental properties last week', 'event': 'ADD'}
+2024-10-15 15:32:44,859 - INFO - Creating memory with data='Sold one of their rental properties last week'
+2024-10-15 15:32:44,860 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I sold one of my rental properties last week.
+Added to memory: I sold one of my rental properties last week.
+
+Current memories:
+Sold one of their rental properties last week
+2024-10-15 15:32:44,965 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: How many rental properties do I currently own? Answer with a number only.
+Expected Answer: 3
+LLM Response: 1
+Result: Incorrect
+
+
+Processing test case: numbers multiplicative update test case
+2024-10-15 15:32:46,021 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:46,021 - INFO - Total existing memories: 0
+2024-10-15 15:32:46,519 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Stored statement: Each box of chocolates contains 12 pieces of chocolates.
+Added to memory: Each box of chocolates contains 12 pieces of chocolates.
+2024-10-15 15:32:46,900 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:47,005 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:47,006 - INFO - Total existing memories: 0
+2024-10-15 15:32:48,829 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:48,830 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Bought 5 boxes of chocolates', 'event': 'ADD'}
+2024-10-15 15:32:48,830 - INFO - Creating memory with data='Bought 5 boxes of chocolates'
+2024-10-15 15:32:48,830 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I bought 5 boxes of chocolates.
+Added to memory: I bought 5 boxes of chocolates.
+
+Current memories:
+Bought 5 boxes of chocolates
+2024-10-15 15:32:48,934 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: How many pieces of chocolates did I buy in total? Answer with a number only.
+Expected Answer: 60
+LLM Response: 5
+Result: Incorrect
+
+
+Processing test case: numbers sequential updates test case
+2024-10-15 15:32:50,812 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:52,121 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:52,122 - INFO - Total existing memories: 0
+2024-10-15 15:32:55,536 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:55,537 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Has 15 students in their class', 'event': 'ADD'}
+2024-10-15 15:32:55,537 - INFO - Creating memory with data='Has 15 students in their class'
+2024-10-15 15:32:55,537 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I have 15 students in my class.
+Added to memory: I have 15 students in my class.
+2024-10-15 15:32:55,885 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:55,999 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:56,002 - INFO - Total existing memories: 1
+2024-10-15 15:32:57,497 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:57,498 - INFO - {'id': '17575c6b-0710-4e39-a22d-ea1be06dafb3', 'text': 'Has 15 students in their class', 'event': 'UPDATE', 'old_memory': 'Has 15 students in their class'}
+2024-10-15 15:32:57,498 - INFO - Updating memory with data='Has 15 students in their class'
+2024-10-15 15:32:57,595 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:57,598 - INFO - Updating memory with ID memory_id='17575c6b-0710-4e39-a22d-ea1be06dafb3' with data='Has 15 students in their class'
+2024-10-15 15:32:57,600 - INFO - {'id': 'new-id-12345', 'text': '3 new students joined the class', 'event': 'ADD'}
+2024-10-15 15:32:57,600 - INFO - Creating memory with data='3 new students joined the class'
+2024-10-15 15:32:57,601 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: 3 new students joined the class.
+Added to memory: 3 new students joined the class.
+2024-10-15 15:32:57,953 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:58,052 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:58,055 - INFO - Total existing memories: 2
+2024-10-15 15:32:59,847 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:59,848 - INFO - {'id': '1a6ea99b-063a-4e80-9027-df4ad1de65c5', 'text': '3 new students joined the class', 'event': 'NONE'}
+2024-10-15 15:32:59,848 - INFO - NOOP for Memory.
+2024-10-15 15:32:59,848 - INFO - {'id': '17575c6b-0710-4e39-a22d-ea1be06dafb3', 'text': 'Has 15 students in their class', 'event': 'UPDATE', 'old_memory': 'Has 15 students in their class', 'new_memory': 'Has 13 students in their class'}
+2024-10-15 15:32:59,848 - INFO - Updating memory with data='Has 15 students in their class'
+2024-10-15 15:32:59,956 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:32:59,964 - INFO - Updating memory with ID memory_id='17575c6b-0710-4e39-a22d-ea1be06dafb3' with data='Has 15 students in their class'
+Stored statement: 2 students in my class moved away.
+Added to memory: 2 students in my class moved away.
+
+Current memories:
+Has 15 students in their class
+3 new students joined the class
+2024-10-15 15:33:00,071 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: How many students are currently in my class? Answer with a number only.
+Expected Answer: 16
+LLM Response: 18
+Result: Incorrect
+
+
+Processing test case: numbers complex reasoning test case
+2024-10-15 15:33:01,028 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:33:01,124 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:33:01,126 - INFO - Total existing memories: 0
+2024-10-15 15:33:02,105 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:33:02,105 - INFO - {'id': '1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'text': 'Needs to read a 300-page book in 10 days', 'event': 'ADD'}
+2024-10-15 15:33:02,105 - INFO - Creating memory with data='Needs to read a 300-page book in 10 days'
+2024-10-15 15:33:02,105 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I need to read a 300-page book in 10 days.
+Added to memory: I need to read a 300-page book in 10 days.
+2024-10-15 15:33:02,424 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:33:02,578 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:33:02,580 - INFO - Total existing memories: 1
+2024-10-15 15:33:04,123 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:33:04,124 - INFO - {'id': '2931042e-fdaa-4f31-9f7b-afa2dddb13ba', 'text': 'Needs to read a 300-page book in 10 days', 'event': 'NONE'}
+2024-10-15 15:33:04,124 - INFO - NOOP for Memory.
+2024-10-15 15:33:04,124 - INFO - {'id': '5b265f7e-b412-4bce-c6e3-12349b72c4a5', 'text': 'Has already read 90 pages', 'event': 'ADD'}
+2024-10-15 15:33:04,124 - INFO - Creating memory with data='Has already read 90 pages'
+2024-10-15 15:33:04,124 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I have already read 90 pages.
+Added to memory: I have already read 90 pages.
+2024-10-15 15:33:04,492 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:33:04,647 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:33:04,649 - INFO - Total existing memories: 2
+2024-10-15 15:33:06,494 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/w1/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-10-15 15:33:06,495 - INFO - {'id': '2931042e-fdaa-4f31-9f7b-afa2dddb13ba', 'text': 'Needs to read a 300-page book in 10 days', 'event': 'NONE'}
+2024-10-15 15:33:06,495 - INFO - NOOP for Memory.
+2024-10-15 15:33:06,495 - INFO - {'id': '50e4362b-4f83-442a-8c0d-045e37fa395a', 'text': 'Has already read 90 pages', 'event': 'NONE'}
+2024-10-15 15:33:06,495 - INFO - NOOP for Memory.
+2024-10-15 15:33:06,495 - INFO - {'id': '5b265f7e-b412-4bce-c6e3-12349b72c4a5', 'text': 'Has 7 days left to finish the book', 'event': 'ADD'}
+2024-10-15 15:33:06,495 - INFO - Creating memory with data='Has 7 days left to finish the book'
+2024-10-15 15:33:06,495 - INFO - Inserting 1 vectors into collection papers_collection
+Stored statement: I have 7 days left to finish the book.
+Added to memory: I have 7 days left to finish the book.
+
+Current memories:
+Needs to read a 300-page book in 10 days
+Has already read 90 pages
+Has 7 days left to finish the book
+2024-10-15 15:33:06,607 - INFO - HTTP Request: POST https://cybertronsparkusage.openai.azure.com/openai/deployments/text-ada-embedding-002-2/embeddings?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+Query: How many pages do I need to read per day to finish the book on time? Answer with a number only.
+Expected Answer: 30
+LLM Response: 30
+Result: Correct
+
+2024-10-15 15:33:07,197 - INFO - HTTP Request: DELETE http://localhost:6333/collections/papers_collection "HTTP/1.1 200 OK"
+Deleted collection: papers_collection
+2024-10-15 15:33:07,198 - INFO - HTTP Request: DELETE http://localhost:6333/collections/azure_gpt35 "HTTP/1.1 200 OK"
+Deleted collection: azure_gpt35
+2024-10-15 15:33:07,199 - INFO - HTTP Request: DELETE http://localhost:6333/collections/azure_gpt40 "HTTP/1.1 200 OK"
+Deleted collection: azure_gpt40
+2024-10-15 15:33:07,200 - INFO - HTTP Request: DELETE http://localhost:6333/collections/ollama "HTTP/1.1 200 OK"
+Deleted collection: ollama

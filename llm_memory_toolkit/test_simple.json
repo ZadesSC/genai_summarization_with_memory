@@ -1,59 +1,15 @@
 [
     {
-        "test_name": "add test case 1",
+        "test_name": "numbers multiplicative update test case",
         "statements": [
-            {"operation": "add", "content": "I will learn French this year."}
+            {"operation": "add", "content": "I have box of chocolates that contains 12 pieces of chocolates in each box."},
+            {"operation": "add", "content": "I bought 5 boxes of chocolates."}
         ],
         "queries": [
             {
                 "operation": "ask",
-                "content": "Did I plan to learn French this year? Only anaswer 'Yes' or 'No' ",
-                "expected_answer": "Yes"
-            }
-        ]
-    },
-    {
-        "test_name": "update test case 1",
-        "description": "Change subject maatter in statement directly, expect LLM to update memory",
-        "statements": [
-            {"operation": "add", "content": "I will learn Japanese this year."},
-            {"operation": "add", "content": "I decided to learn Spanish instead of Japanese this year."}
-        ],
-        "queries": [
-            {
-                "operation": "ask",
-                "content": "Did I plan to learn Spanish this year? Only anaswer 'Yes' or 'No' ",
-                "expected_answer": "Yes"
-            }
-        ]
-    },
-    {
-        "test_name": "update test case 2",
-        "description": "Testing to see if changing dates for an event will be reflected in memory.Memory should keep the first statement as memory, and then update the date from the 2nd statement",
-        "statements": [
-            {"operation": "add", "content": "My friends and I plan to go on a trip to Japan on the 10/17/2024"},
-            {"operation": "add", "content": "I just realzied my mom will visit me on 10/17/2024"},
-            {"operation": "add", "content": "My friends and I discussed and decided to change our Japan trip date to 10/24/2024"}
-        ],
-        "queries": [
-            {
-                "operation": "ask",
-                "content": "When did I plan to go to Japan with friends this year? Answer in mm/dd/yyyy format only ",
-                "expected_answer": "10/24/2024"
-            }
-        ]
-    },
-    {
-        "test_name": "delete test case 1",
-        "statements": [
-            {"operation": "add", "content": "I will learn German this year."},
-            {"operation": "add", "content": "I have decided not to learn German this year."}
-        ],
-        "queries": [
-            {
-                "operation": "ask",
-                "content": "Did I plan to learn German this year?  Only anaswer 'Yes' or 'No'",
-                "expected_answer": "No"
+                "content": "How many pieces of chocolates did I buy in total? Answer with a number only.",
+                "expected_answer": "60"
             }
         ]
     }
