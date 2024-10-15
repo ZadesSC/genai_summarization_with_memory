@@ -1,0 +1,102 @@
+{
+    "numbers simple update test case 1": {
+        "queries": [
+            {
+                "query": "How many cats do I have? Answer with a number only.",
+                "expected_answer": "3",
+                "llm_response": "2",
+                "is_correct": false
+            }
+        ]
+    },
+    "numbers simple update test case 2": {
+        "queries": [
+            {
+                "query": "How many kilometers did I run today? Answer with a number only.",
+                "expected_answer": "7",
+                "llm_response": "7",
+                "is_correct": true
+            }
+        ]
+    },
+    "numbers correction test case": {
+        "queries": [
+            {
+                "query": "What is my car's mileage? Answer with a number only.",
+                "expected_answer": "55000",
+                "llm_response": "55000",
+                "is_correct": true
+            }
+        ]
+    },
+    "numbers calculation test case": {
+        "queries": [
+            {
+                "query": "How much money do I have in my savings account? Answer with a number only.",
+                "expected_answer": "1500",
+                "llm_response": "500",
+                "is_correct": false
+            }
+        ]
+    },
+    "numbers subtraction test case": {
+        "queries": [
+            {
+                "query": "How many apples do I have left? Answer with a number only.",
+                "expected_answer": "7",
+                "llm_response": "7",
+                "is_correct": true
+            }
+        ]
+    },
+    "numbers complex update test case": {
+        "queries": [
+            {
+                "query": "What is my final test score? Answer with a number only.",
+                "expected_answer": "90",
+                "llm_response": "90",
+                "is_correct": true
+            }
+        ]
+    },
+    "numbers indirect update test case": {
+        "queries": [
+            {
+                "query": "How many rental properties do I currently own? Answer with a number only.",
+                "expected_answer": "3",
+                "llm_response": "1",
+                "is_correct": false
+            }
+        ]
+    },
+    "numbers multiplicative update test case": {
+        "queries": [
+            {
+                "query": "How many chocolates did I buy in total? Answer with a number only.",
+                "expected_answer": "60",
+                "llm_response": "5",
+                "is_correct": false
+            }
+        ]
+    },
+    "numbers sequential updates test case": {
+        "queries": [
+            {
+                "query": "How many students are currently in my class? Answer with a number only.",
+                "expected_answer": "16",
+                "llm_response": "18",
+                "is_correct": false
+            }
+        ]
+    },
+    "numbers complex reasoning test case": {
+        "queries": [
+            {
+                "query": "How many pages do I need to read per day to finish the book on time? Answer with a number only.",
+                "expected_answer": "30",
+                "llm_response": "30",
+                "is_correct": true
+            }
+        ]
+    }
+}

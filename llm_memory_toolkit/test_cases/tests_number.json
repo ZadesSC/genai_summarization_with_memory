@@ -1,0 +1,144 @@
+[
+    {
+        "test_name": "numbers simple update test case 1",
+        "statements": [
+            {"operation": "add", "content": "I have 2 cats."},
+            {"operation": "add", "content": "I adopted another cat."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "How many cats do I have? Answer with a number only.",
+                "expected_answer": "3"
+            }
+        ]
+    },
+    {
+        "test_name": "numbers simple update test case 2",
+        "statements": [
+            {"operation": "add", "content": "I ran 5 kilometers today."},
+            {"operation": "add", "content": "I actually ran 7 kilometers, not 5."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                    "content": "How many kilometers did I run today? Answer with a number only.",
+                "expected_answer": "7"
+            }
+        ]
+    },
+    {
+        "test_name": "numbers correction test case",
+        "statements": [
+            {"operation": "add", "content": "My car's mileage is 50,000 miles."},
+            {"operation": "add", "content": "After checking, the mileage is actually 55,000 miles."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "What is my car's mileage? Answer with a number only.",
+                "expected_answer": "55000"
+            }
+        ]
+    },
+    {
+        "test_name": "numbers calculation test case",
+        "statements": [
+            {"operation": "add", "content": "I have $1000 in my savings account."},
+            {"operation": "add", "content": "I deposited an additional $500 into my savings account."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "How much money do I have in my savings account? Answer with a number only.",
+                "expected_answer": "1500"
+            }
+        ]
+    },
+    {
+        "test_name": "numbers subtraction test case",
+        "statements": [
+            {"operation": "add", "content": "I had 10 apples."},
+            {"operation": "add", "content": "I gave 3 apples to my neighbor."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "How many apples do I have left? Answer with a number only.",
+                "expected_answer": "7"
+            }
+        ]
+    },
+    {
+        "test_name": "numbers complex update test case",
+        "statements": [
+            {"operation": "add", "content": "I earned a score of 85 on my test."},
+            {"operation": "add", "content": "The teacher added 5 bonus points to everyone's score."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "What is my final test score? Answer with a number only.",
+                "expected_answer": "90"
+            }
+        ]
+    },
+    {
+        "test_name": "numbers indirect update test case",
+        "statements": [
+            {"operation": "add", "content": "I own 4 rental properties."},
+            {"operation": "add", "content": "I sold one of my rental properties last week."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "How many rental properties do I currently own? Answer with a number only.",
+                "expected_answer": "3"
+            }
+        ]
+    },
+    {
+        "test_name": "numbers multiplicative update test case",
+        "statements": [
+            {"operation": "add", "content": "Each box contains 12 chocolates."},
+            {"operation": "add", "content": "I bought 5 boxes of chocolates."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "How many chocolates did I buy in total? Answer with a number only.",
+                "expected_answer": "60"
+            }
+        ]
+    },
+    {
+        "test_name": "numbers sequential updates test case",
+        "statements": [
+            {"operation": "add", "content": "I have 15 students in my class."},
+            {"operation": "add", "content": "3 new students joined the class."},
+            {"operation": "add", "content": "2 students moved away."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "How many students are currently in my class? Answer with a number only.",
+                "expected_answer": "16"
+            }
+        ]
+    },
+    {
+        "test_name": "numbers complex reasoning test case",
+        "statements": [
+            {"operation": "add", "content": "I need to read a 300-page book in 10 days."},
+            {"operation": "add", "content": "I have already read 90 pages."},
+            {"operation": "add", "content": "I have 7 days left to finish the book."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "How many pages do I need to read per day to finish the book on time? Answer with a number only.",
+                "expected_answer": "30"
+            }
+        ]
+    }
+]

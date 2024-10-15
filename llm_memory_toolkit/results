@@ -3,7 +3,7 @@ Deleted collection: azure_gpt35
 Deleted collection: azure_gpt40
 Deleted collection: ollama
 
-Processing test case: test case 1
+Processing test case: add test case 1
 Stored statement: I will learn French this year.
 Added to memory: I will learn French this year.
 
@@ -15,25 +15,38 @@ LLM Response: Yes
 Result: Correct
 
 
-Processing test case: test case 2
+Processing test case: update test case 1
 Stored statement: I will learn Japanese this year.
 Added to memory: I will learn Japanese this year.
 Stored statement: I decided to learn Spanish instead of Japanese this year.
 Added to memory: I decided to learn Spanish instead of Japanese this year.
 
 Current memories:
+Decided to learn Spanish instead of Japanese this year
 Query: Did I plan to learn Spanish this year? Only anaswer 'Yes' or 'No' 
 Expected Answer: Yes
-LLM Response: No
-Result: Incorrect
-
-Query: Did I plan to learn Japanese this year?  Only anaswer 'Yes' or 'No' 
-Expected Answer: No
-LLM Response: No
+LLM Response: Yes
 Result: Correct
 
 
-Processing test case: test case 3
+Processing test case: update test case 2
+Stored statement: My friends and I plan to go on a trip to Japan on the 10/17/2024
+Added to memory: My friends and I plan to go on a trip to Japan on the 10/17/2024
+Stored statement: I just realzied my mom will visit me on 10/17/2024
+Added to memory: I just realzied my mom will visit me on 10/17/2024
+Stored statement: My friends and I discussed and decided to change our Japan trip date to 10/24/2024
+Added to memory: My friends and I discussed and decided to change our Japan trip date to 10/24/2024
+
+Current memories:
+Changed Japan trip date to 10/24/2024
+Mom will visit on 10/17/2024
+Query: When did I plan to go to Japan with friends this year? Answer in mm/dd/yyyy format only 
+Expected Answer: 10/24/2024
+LLM Response: 10/24/2024
+Result: Correct
+
+
+Processing test case: delete test case 1
 Stored statement: I will learn German this year.
 Added to memory: I will learn German this year.
 Stored statement: I have decided not to learn German this year.

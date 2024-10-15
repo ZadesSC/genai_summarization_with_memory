@@ -1,6 +1,6 @@
-# **GenAI Summarization with Memory**
+# **Paper Manager*
 
-**GenAI Summarization with Memory** is a tool designed to fetch research papers from various sources (currently only used HuggingFace Daily Papers), store them in both a SQLite database and a memory storage system (`mem0`), and interact with a Large Language Model (LLM) for summarization and question answering. This project attempts to leverage memory to enhance the LLM's ability to reference previously stored research papers and related information. Currently due to limitations with mem0, the abstract of each paper is first converted to sound like a diary from the prespective of the researcher before being put into memory by mem0.
+**Paper Manger** is a tool designed to fetch research papers from various sources (currently only used HuggingFace Daily Papers), store them in both a SQLite database and a memory storage system (`mem0`), and interact with a Large Language Model (LLM) for summarization and question answering. This project attempts to leverage memory to enhance the LLM's ability to reference previously stored research papers and related information. Currently due to limitations with mem0, the abstract of each paper is first converted to sound like a diary from the prespective of the researcher before being put into memory by mem0.
 
 
 ## **Features**
@@ -47,13 +47,13 @@ The tool is designed around several subcommands, allowing you to fetch, store, q
 
 You can either call the main.py file directory, or run it as a python program.
    ```bash
-   python src/papers/main.py
+   python src/paper_manager/main.py
    ```
  
 Running it as a python program requires installing it first.
    ```bash
    pip install -e .
-   python -m papers.main
+   python -m paper_manager.main
    ```
 
 You can run it direcly as a program
@@ -66,7 +66,7 @@ You can run it direcly as a program
 
 The main command fetches research papers from a specified source URL (default: Hugging Face), stores them in the SQLite database and the mem0 memory system, and processes the papers for future reference.
    ```bash
-   python paper_memory_manager.py main --source-url "https://huggingface.co/papers" --config-file path/to/config.json --test
+   paper_manager --source-url "https://huggingface.co/papers" --config-file path/to/config.json --test
    ```
 - `--source-url`: The URL of the paper source (defaults to Hugging Face).
 - `--config-file`: Path to the custom `mem0` configuration file (optional).
@@ -76,7 +76,7 @@ The main command fetches research papers from a specified source URL (default: H
 
 The query-memory command queries stored memories from the mem0 system.
    ```bash
-   python paper_memory_manager.py query-memory --config-file path/to/config.json
+   paper_manager query-memory --config-file path/to/config.json
    ```
 - `--config-file`: Path to the custom `mem0` configuration file (optional).
 
@@ -84,7 +84,7 @@ The query-memory command queries stored memories from the mem0 system.
 
 The `query-db` command queries the SQLite database for stored research papers and prints them.
    ```bash
-   python paper_memory_manager.py query-db
+   paper_manager query-db
    ```
 
 ### Asking Questions to LLM

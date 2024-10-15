@@ -1,0 +1,102 @@
+{
+    "text simple update test case 1": {
+        "queries": [
+            {
+                "query": "Do I prefer mystery novels? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No",
+                "llm_response": "No",
+                "is_correct": true
+            }
+        ]
+    },
+    "text simple update test case 2": {
+        "queries": [
+            {
+                "query": "Is blue my favorite color? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No",
+                "llm_response": "No",
+                "is_correct": true
+            }
+        ]
+    },
+    "text contradiction test case": {
+        "queries": [
+            {
+                "query": "Am I a vegetarian? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No",
+                "llm_response": "No",
+                "is_correct": true
+            }
+        ]
+    },
+    "text preference change test case": {
+        "queries": [
+            {
+                "query": "Do I dislike spicy food? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No",
+                "llm_response": "No",
+                "is_correct": true
+            }
+        ]
+    },
+    "text hobby update test case": {
+        "queries": [
+            {
+                "query": "Do I play the piano? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No",
+                "llm_response": "No",
+                "is_correct": true
+            }
+        ]
+    },
+    "text indirect update test case": {
+        "queries": [
+            {
+                "query": "Do I live in New York City? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No",
+                "llm_response": "No",
+                "is_correct": true
+            }
+        ]
+    },
+    "text professional change test case": {
+        "queries": [
+            {
+                "query": "Am I currently working as a software engineer? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No",
+                "llm_response": "No",
+                "is_correct": true
+            }
+        ]
+    },
+    "text possession update test case": {
+        "queries": [
+            {
+                "query": "Do I own a bicycle? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No",
+                "llm_response": "No",
+                "is_correct": true
+            }
+        ]
+    },
+    "text relationship update test case": {
+        "queries": [
+            {
+                "query": "Does my brother live in Canada? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No",
+                "llm_response": "No",
+                "is_correct": true
+            }
+        ]
+    },
+    "text complex reasoning test case": {
+        "queries": [
+            {
+                "query": "Am I learning Python? Only answer 'Yes' or 'No'.",
+                "expected_answer": "Yes",
+                "llm_response": "Yes",
+                "is_correct": true
+            }
+        ]
+    }
+}

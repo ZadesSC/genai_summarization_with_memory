@@ -1,3 +1,87 @@
+# **Memory Test Ultity*
+
+The Memory Test Utility is a Python-based testing tool designed to evaluate the memory capabilities of the mem0 system with Large Language Models (LLMs). The primary function of this utility is to test how well different LLMs interact with mem0 to store and retrieve memories (statements), using customizable test cases.
+
+## **Installation**
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/genai_summarization_with_memory.git
+   cd genai_summarization_with_memory
+
+2. **Set up the virtual environment**:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate    # For Linux/MacOS
+   venv\Scripts\activate       # For Windows
+
+3. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+
+4. **Create a .env file: Set up environment variables in a .env file (such as API keys, endpoint URLs, etc.).**:
+   Example:
+   ```bash
+   QDRANT_URL=http://localhost:6333
+   QDRANT_PORT=6333
+   AZURE_OPENAI_ENDPOINT=https://your-azure-openai-instance.openai.azure.com
+   AZURE_OPENAI_API_KEY=your-openai-api-key
+   OPENAI_API_VERSION=v1
+
+## **Configuration**
+
+**mem0 Configuration**: Customize the mem0 memory system using a configuration file (config.json). This file allows you to specify details like the LLM provider, model, and other settings for interacting with the memory system.
+
+**Test Cases**: Test scenarios are provided via JSON files that define the memory operations (e.g., add, update, delete) and queries to be tested.
+
+## **Usage**
+
+You can either call the main.py file directory, or run it as a python program.
+   ```bash
+   python src/llm_memory_toolkit/main.py
+   ```
+ 
+Running it as a python program requires installing it first.
+   ```bash
+   pip install -e .
+   python -m llm_memory_toolkit.main
+   ```
+
+You can run it direcly as a program
+   ```bash
+   pip install -e .
+   llm_memory_toolkit
+   ```
+
+## **Running Test Cases**
+
+Each test case will run the following steps:
+
+1. Add statements to memory.
+2. Query the memory to check if the statements were stored correctly.
+3. Use mem0 to answer specific questions about the stored statements using the LLM.
+4. Evaluate the LLM’s ability to process and return accurate answers based on stored memories.
+
+### Test Case Example
+
+    ```json
+    {
+        "test_name": "Simple Memory Test",
+        "statements": [
+            { "operation": "add", "content": "I went to Japan on March 2023" },
+            { "operation": "add", "content": "I returned to the USA on April 2023" }
+        ],
+        "queries": [
+            { "operation": "ask", "content": "When did I go to Japan?", "expected_answer": "March 2023" },
+            { "operation": "ask", "content": "When did I return to the USA?", "expected_answer": "April 2023" }
+        ]
+    }
+    ```
+
+
+
+
+
 # Memory Addition with Different LLMs
 
 This first experitment focuses on adding memories with different data types (string, integar, dates) using different LLMs (GPT4, GPT3.5, Llama3.1) and then evaluting the ability of the LLM to properly store and retrieve those data (memories).
@@ -65,3 +149,20 @@ Comparasion of llama an gpt4 results
 | **Int**           | 9/30          | 30/30     |
 | **Dates**         | 6/30          | 30/30     |
 | **Total**         | 18/90         | 90/90     |
+
+
+# Memory Update with Different LLMs
+
+For update, we will test with cases of increasing complexity and reasoning for each of the cateories.  This will be simplier in output compared to addition.  The Addition Tests might be rerun later with this new simplier format.  The tests contain only 10 tests per each of the 3 categories and its a simple pass/fail.
+
+# Results
+
+## GPT4 Results
+
+| Category  | Storage     |
+|-----------|-------------|
+| **Str**   | 10/10       |
+| **Int**   | 5/10        |
+| **Date**  | 9/10        |
+
+It appears that GPT4 have no issues with natural language questions but struggles more with questions related to numbers.

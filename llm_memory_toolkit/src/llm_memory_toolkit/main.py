@@ -223,6 +223,10 @@ def main():
         sys.stdout.log.close()
         sys.stdout = sys.__stdout__
 
+    # write results to file
+    with open(args.output, 'w') as file:
+        json.dump(results, file, indent=4) 
+
     # Clean up Qdrant collections after tests are completed
     cleanup_qdrant(mem0_config)
 

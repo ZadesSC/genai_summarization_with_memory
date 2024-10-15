@@ -1,0 +1,143 @@
+[
+    {
+        "test_name": "text simple update test case 1",
+        "statements": [
+            {"operation": "add", "content": "I enjoy reading mystery novels."},
+            {"operation": "add", "content": "I have started to prefer science fiction over mystery novels."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Do I prefer mystery novels? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No"
+            }
+        ]
+    },
+    {
+        "test_name": "text simple update test case 2",
+        "statements": [
+            {"operation": "add", "content": "My favorite color is blue."},
+            {"operation": "add", "content": "I've realized I like green more than blue."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Is blue my favorite color? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No"
+            }
+        ]
+    },
+    {
+        "test_name": "text contradiction test case",
+        "statements": [
+            {"operation": "add", "content": "I am a vegetarian."},
+            {"operation": "add", "content": "I ate a steak for dinner last night."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Am I a vegetarian? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No"
+            }
+        ]
+    },
+    {
+        "test_name": "text preference change test case",
+        "statements": [
+            {"operation": "add", "content": "I dislike spicy food."},
+            {"operation": "add", "content": "I've developed a taste for spicy food lately."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Do I dislike spicy food? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No"
+            }
+        ]
+    },
+    {
+        "test_name": "text hobby update test case",
+        "statements": [
+            {"operation": "add", "content": "I play the piano."},
+            {"operation": "add", "content": "I switched from piano to guitar lessons."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Do I play the piano? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No"
+            }
+        ]
+    },
+    {
+        "test_name": "text indirect update test case",
+        "statements": [
+            {"operation": "add", "content": "I live in New York City."},
+            {"operation": "add", "content": "I moved to Los Angeles last month."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Do I live in New York City? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No"
+            }
+        ]
+    },
+    {
+        "test_name": "text professional change test case",
+        "statements": [
+            {"operation": "add", "content": "I work as a software engineer."},
+            {"operation": "add", "content": "I decided to pursue a career in teaching instead."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Am I currently working as a software engineer? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No"
+            }
+        ]
+    },
+    {
+        "test_name": "text possession update test case",
+        "statements": [
+            {"operation": "add", "content": "I own a bicycle."},
+            {"operation": "add", "content": "I sold my bicycle to a friend."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Do I own a bicycle? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No"
+            }
+        ]
+    },
+    {
+        "test_name": "text relationship update test case",
+        "statements": [
+            {"operation": "add", "content": "My brother lives in Canada."},
+            {"operation": "add", "content": "My brother moved back to the US."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Does my brother live in Canada? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No"
+            }
+        ]
+    },
+    {
+        "test_name": "text complex reasoning test case",
+        "statements": [
+            {"operation": "add", "content": "I am learning to code in Python."},
+            {"operation": "add", "content": "I decided to focus on JavaScript instead of Python."},
+            {"operation": "add", "content": "However, I'm now learning both Python and JavaScript."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Am I learning Python? Only answer 'Yes' or 'No'.",
+                "expected_answer": "Yes"
+            }
+        ]
+    }
+]

@@ -1,0 +1,148 @@
+[
+    {
+        "test_name": "dates simple update test case 1",
+        "statements": [
+            {"operation": "add", "content": "My birthday party is on 12/01/2024."},
+            {"operation": "add", "content": "I rescheduled my birthday party to 12/08/2024."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "When is my birthday party? Answer in mm/dd/yyyy format only.",
+                "expected_answer": "12/08/2024"
+            }
+        ]
+    },
+    {
+        "test_name": "dates cancellation test case",
+        "statements": [
+            {"operation": "add", "content": "I have a doctor's appointment on 01/15/2025."},
+            {"operation": "add", "content": "I canceled my doctor's appointment."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Do I have a doctor's appointment on 01/15/2025? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No"
+            }
+        ]
+    },
+    {
+        "test_name": "dates conflicting schedules test case",
+        "statements": [
+            {"operation": "add", "content": "I am attending a wedding on 05/20/2025."},
+            {"operation": "add", "content": "I have an important meeting on 05/20/2025."},
+            {"operation": "add", "content": "I decided to attend the meeting instead of the wedding."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Am I attending the wedding on 05/20/2025? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No"
+            }
+        ]
+    },
+    {
+        "test_name": "dates recurring event test case",
+        "statements": [
+            {"operation": "add", "content": "I have a team meeting every Friday."},
+            {"operation": "add", "content": "This week's team meeting is moved to Thursday."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Is the team meeting on Friday this week? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No"
+            }
+        ]
+    },
+    {
+        "test_name": "dates event addition test case",
+        "statements": [
+            {"operation": "add", "content": "I am free on 06/10/2025."},
+            {"operation": "add", "content": "I have scheduled a workshop on 06/10/2025."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Am I free on 06/10/2025? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No"
+            }
+        ]
+    },
+    {
+        "test_name": "dates holiday overlap test case",
+        "statements": [
+            {"operation": "add", "content": "I am traveling on 12/25/2024."},
+            {"operation": "add", "content": "I realized 12/25/2024 is a public holiday."},
+            {"operation": "add", "content": "I changed my travel date to 12/26/2024."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Am I traveling on 12/25/2024? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No"
+            }
+        ]
+    },
+    {
+        "test_name": "dates multiple rescheduling test case",
+        "statements": [
+            {"operation": "add", "content": "The project deadline is on 03/31/2025."},
+            {"operation": "add", "content": "The deadline was extended to 04/15/2025."},
+            {"operation": "add", "content": "The deadline was moved back to 04/10/2025."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "When is the project deadline? Answer in mm/dd/yyyy format only.",
+                "expected_answer": "04/10/2025"
+            }
+        ]
+    },
+    {
+        "test_name": "dates event overlap test case",
+        "statements": [
+            {"operation": "add", "content": "I am attending a conference from 07/01/2025 to 07/05/2025."},
+            {"operation": "add", "content": "I have a family reunion on 07/03/2025."},
+            {"operation": "add", "content": "I will leave the conference early to attend the family reunion."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Will I be at the conference on 07/04/2025? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No"
+            }
+        ]
+    },
+    {
+        "test_name": "dates indirect date change test case",
+        "statements": [
+            {"operation": "add", "content": "I have planned a hiking trip on 09/15/2025."},
+            {"operation": "add", "content": "The weather forecast predicts heavy rain on 09/15/2025."},
+            {"operation": "add", "content": "I postponed the hiking trip due to the weather."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Is my hiking trip still on 09/15/2025? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No"
+            }
+        ]
+    },
+    {
+        "test_name": "dates complex scheduling test case",
+        "statements": [
+            {"operation": "add", "content": "I will be on vacation from 08/01/2025 to 08/10/2025."},
+            {"operation": "add", "content": "A critical work meeting is scheduled on 08/05/2025."},
+            {"operation": "add", "content": "I decided to shorten my vacation to attend the meeting."}
+        ],
+        "queries": [
+            {
+                "operation": "ask",
+                "content": "Will I be on vacation on 08/05/2025? Only answer 'Yes' or 'No'.",
+                "expected_answer": "No"
+            }
+        ]
+    }
+]
